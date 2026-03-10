@@ -44,7 +44,7 @@ This repository contains the customized analysis code for the manuscript Wang  *
 | `Supplementary/S1.Rmd` | Bulk normal kidney SBS and indel mutation burden by country |
 | `Supplementary/S2.Rmd` | HDP *de novo* signature decomposition and cosine similarity to reference signatures |
 | `Supplementary/S3.Rmd` | SigProfiler *de novo* signature decomposition and cosine similarity to reference signatures|
-| `Supplementary/S4.Rmd` | Indel signature composition across nephron structurese |
+| `Supplementary/S4.Rmd` | Indel signature composition across nephron structures |
 | `Supplementary/S6.Rmd` | Geographic variation in SBS12, SBS22a/b/c and ID23 burden |
 | `Supplementary/S7.Rmd` | Country-level mutation rate estimates for SBS40b in bulk kidney, proximal tubules, and kidney cancer |
 
@@ -52,7 +52,7 @@ This repository contains the customized analysis code for the manuscript Wang  *
 | Script | Description |
 |--------|-------------|
 | `signature_variation/siganture_hypotheis_tesing_bulk.Rmd` | Hypothesis testing for age, sex, and geographic effects on signature burden in bulk samples |
-| `signature_variation/signatures_enrichment_lcm.Rmd` | LCM signature enrichment by kidney structure and country |
+| `signature_variation/signatures_enrichment_lcm.Rmd` | Signature enrichment in LCM biopsies across nephron structures and countries |
 
 <!-- --- -->
 
