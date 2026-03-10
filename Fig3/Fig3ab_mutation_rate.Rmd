@@ -1,0 +1,144 @@
+---
+author: "Yichen Wang"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(gridExtra)
+library(ggpubr)
+library(nlme)
+library(tidyverse)
+library(RColorBrewer)
+library("cowplot")
+```
+```{r}
+metadata = read.csv('../data/LCM_normal_kidney_metadata.csv') 
+metadata$Country[metadata$Country=='United Kingdom']='UK'
+metadata = metadata[metadata$Country=='UK',]
+
+metadata$Structure[metadata$Structure=='Distal_tubules'] ='Distal tubules'
+metadata$Structure[metadata$Structure=='Proximal_tubules'] ='Proximal tubules'
+metadata$Structure = factor(metadata$Structure, levels = c('Proximal tubules','Medulla','Glomeruli','Distal tubules'))
+metadata=metadata[!metadata$Patient %in% c('PD30369'),] #excluded by pathology review due to sever chronic changes
+table(metadata$Structure)
+```
+
+```{r modelling SBS burden}
+lmm1 <- lme( Normal_SBS_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 ), data = metadata, method = "ML")
+summary(lmm1)
+```
+When variance of the residuals is allowed to vary with respect to the location. The model fitness was also improved.
+```{r variance of the residuals is allowed to vary with respect to the location for SBS}
+lmm1.2 <- lme( Normal_SBS_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 |Structure ), data = metadata, method = "ML")
+anova(lmm1, lmm1.2)
+```
+
+
+```{r}
+lmm1.2 <- lme( Normal_SBS_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 |Structure ), data = metadata, method = "REML")
+summary(lmm1.2)
+fixed.m1 <- data.frame(fixef(lmm1.2))
+intervals(lmm1.2, which = "fixed")
+reg_summary_SBS <- data.frame(
+  Term      = rownames(summary(lmm1.2)$tTable),
+  Estimate  = summary(lmm1.2)$tTable[, "Value"],
+  Std.Error = summary(lmm1.2)$tTable[, "Std.Error"],
+  CI_lower  = intervals(lmm1.2, which = "fixed")$fixed[, "lower"],
+  CI_upper  = intervals(lmm1.2, which = "fixed")$fixed[, "upper"],
+  p_value   = summary(lmm1.2)$tTable[, "p-value"]
+)
+write.csv(reg_summary_SBS, "../../data_S1/Fig3a_LCM_SBS_mutation_rate_regression.csv", row.names = FALSE)
+```
+
+```{r plotting SBS mutation rate}
+p_sbs=ggplot(data = metadata, mapping = aes(x = Age, y = Normal_SBS_burden))+geom_point(aes(colour = Structure,fill=Structure),alpha = 0.8) +theme_bw()+theme(panel.grid=element_blank(),panel.border=element_blank(),axis.line=element_line(size=0.25,colour="black"),axis.ticks = element_line(linewidth = 0.25))+
+  
+        geom_abline(intercept = fixed.m1[1,], slope =  fixed.m1['Age:StructureDistal tubules',],colour='#C77CFF')+
+        geom_ribbon(aes(ymin = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureDistal tubules','lower'], ymax = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureDistal tubules','upper']),fill='#C77CFF', alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m1[1,], slope =  fixed.m1['Age:StructureGlomeruli',],colour='#00BFC4')+
+        geom_ribbon(aes(ymin = fixed.m1[1,]+
+                          Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureGlomeruli','lower'], ymax = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureGlomeruli','upper']), fill='#00BFC4',alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m1[1,], slope =  fixed.m1['Age:StructureMedulla',],colour='#7CAE00')+
+        geom_ribbon(aes(ymin = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureMedulla','lower'], ymax = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureMedulla','upper']), fill='#7CAE00',alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m1[1,], slope =  fixed.m1['Age:StructureProximal tubules',],colour='#F8766D')+
+        geom_ribbon(aes(ymin = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureProximal tubules','lower'], ymax = fixed.m1[1,]+Age*intervals(lmm1.2, which = "fixed")[["fixed"]]['Age:StructureProximal tubules','upper']), fill='#F8766D',alpha = 0.1)+
+        labs(y='Substitutions / genome',x="Age (yrs)",  fill = "Structure", color = "Structure")+
+        scale_x_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05), add = c(0, 0)))+
+        theme(legend.key.size = unit(0.25, "cm"),
+              title=element_text(size=7),
+              axis.text.y=element_text(size=7,color="black"),
+              axis.text.x=element_text(size=7,color="black"),
+              legend.text=element_text(size=7))
+
+p_sbs
+```
+
+
+
+```{r modelling ID burden}
+lmm2 <- lme( Normal_ID_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 ), data = metadata, method = "ML")
+summary(lmm2)
+fixed.m2 <- data.frame(fixef(lmm2))
+intervals(lmm2, which = "fixed")
+```
+
+```{r variance of the residuals is allowed to vary with respect to the location for indel}
+lmm2.2 <- lme( Normal_ID_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 |Structure ), data = metadata, method = "ML")
+anova(lmm2, lmm2.2)
+```
+
+```{r}
+lmm2.2 <- lme( Normal_ID_burden  ~ Age:Structure , random = list(Patient = pdDiag(form = ~ Age:Structure-1)), weights = varIdent(form = ~1 |Structure ), data = metadata, method = "REML")
+summary(lmm2.2)
+fixed.m2 <- data.frame(fixef(lmm2.2))
+intervals(lmm2.2, which = "fixed")
+reg_summary_ID <- data.frame(
+  Term      = rownames(summary(lmm2.2)$tTable),
+  Estimate  = summary(lmm2.2)$tTable[, "Value"],
+  Std.Error = summary(lmm2.2)$tTable[, "Std.Error"],
+  CI_lower  = intervals(lmm2.2, which = "fixed")$fixed[, "lower"],
+  CI_upper  = intervals(lmm2.2, which = "fixed")$fixed[, "upper"],
+  p_value   = summary(lmm2.2)$tTable[, "p-value"]
+)
+write.csv(reg_summary_ID, "../../data_S1/Fig3b_LCM_ID_mutation_rate_regression.csv", row.names = FALSE)
+```
+
+```{r plotting indel mutation rate}
+p_id=ggplot(data = metadata, mapping = aes(x = Age, y = Normal_ID_burden))+geom_point(aes(colour = Structure,fill=Structure),alpha = 0.8) +theme_bw()+theme(panel.grid=element_blank(),panel.border=element_blank(),axis.line=element_line(size=0.25,colour="black"),axis.ticks = element_line(linewidth = 0.25))+
+  
+       geom_abline(intercept = fixed.m2[1,], slope =  fixed.m2['Age:StructureDistal tubules',],colour='#C77CFF')+
+        geom_ribbon(aes(ymin = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureDistal tubules','lower'], ymax = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureDistal tubules','upper']),fill='#C77CFF', alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m2[1,], slope =  fixed.m2['Age:StructureGlomeruli',],colour='#00BFC4')+
+        geom_ribbon(aes(ymin = fixed.m2[1,]+
+                          Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureGlomeruli','lower'], ymax = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureGlomeruli','upper']), fill='#00BFC4',alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m2[1,], slope =  fixed.m2['Age:StructureMedulla',],colour='#7CAE00')+
+        geom_ribbon(aes(ymin = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureMedulla','lower'], ymax = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureMedulla','upper']), fill='#7CAE00',alpha = 0.1)+
+  
+        geom_abline(intercept = fixed.m2[1,], slope =  fixed.m2['Age:StructureProximal tubules',],colour='#F8766D')+
+        geom_ribbon(aes(ymin = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureProximal tubules','lower'], ymax = fixed.m2[1,]+Age*intervals(lmm2.2, which = "fixed")[["fixed"]]['Age:StructureProximal tubules','upper']), fill='#F8766D',alpha = 0.1)+
+        labs(y='Indels / genome',x="Age (yrs)",  fill = "Structure", color = "Structure")+
+        scale_x_continuous(limits = c(0, NA), expand = expansion(mult = c(0, 0.05), add = c(0, 0)))+
+        theme(legend.key.size = unit(0.25, "cm"),
+              title=element_text(size=7),
+              axis.text.y=element_text(size=7,color="black"),
+              axis.text.x=element_text(size=7,color="black"),
+              legend.text=element_text(size=7))
+
+p_id
+```
+
+```{r saving plot}
+pdf("../../figure/mutation rate/mutation_rate.pdf",width = 6.04, height = 2)
+
+ggarrange(p_sbs, p_id, ncol = 2,common.legend = FALSE, legend = "right")#labels = c('a','b'),
+
+
+dev.off()
+```

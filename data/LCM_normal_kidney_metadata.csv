@@ -1,0 +1,469 @@
+Tumor,Normal_Kidney,Patient,Sample,Structure,Sex,Age,Country,City,Tobacco,Alcohol,Tumor_SBS_burden,Normal_SBS_burden,Tumor_ID_burden,Normal_ID_burden
+,PD30346b,PD30346,PD30346b_ds0001,Glomeruli,Male,40,United Kingdom,Cambridge,Missing,Missing,NA,1709,NA,82
+,PD30346b,PD30346,PD30346b_ds0002,Glomeruli,Male,40,United Kingdom,Cambridge,Missing,Missing,NA,1489,NA,71
+,PD30346b,PD30346,PD30346b_ds0003,Proximal_tubules,Male,40,United Kingdom,Cambridge,Missing,Missing,NA,1777,NA,202
+,PD30354c,PD30354,PD30354c_ds0001,Glomeruli,Male,80,United Kingdom,Cambridge,Missing,Missing,NA,1722,NA,112
+,PD30354c,PD30354,PD30354c_ds0002,Glomeruli,Male,80,United Kingdom,Cambridge,Missing,Missing,NA,2151,NA,82
+,PD30354c,PD30354,PD30354c_ds0003,Proximal_tubules,Male,80,United Kingdom,Cambridge,Missing,Missing,NA,4013,NA,377
+,PD30354c,PD30354,PD30354c_ds0004,Proximal_tubules,Male,80,United Kingdom,Cambridge,Missing,Missing,NA,3600,NA,405
+,PD30356f,PD30356,PD30356f_ds0001,Glomeruli,Female,35,United Kingdom,Cambridge,Missing,Missing,NA,1324,NA,92
+,PD30356f,PD30356,PD30356f_ds0002,Glomeruli,Female,35,United Kingdom,Cambridge,Missing,Missing,NA,1545,NA,98
+,PD30356f,PD30356,PD30356f_ds0003,Glomeruli,Female,35,United Kingdom,Cambridge,Missing,Missing,NA,1339,NA,62
+,PD30356f,PD30356,PD30356f_ds0004,Proximal_tubules,Female,35,United Kingdom,Cambridge,Missing,Missing,NA,2404,NA,364
+,PD30356f,PD30356,PD30356f_ds0005,Proximal_tubules,Female,35,United Kingdom,Cambridge,Missing,Missing,NA,2859,NA,375
+,PD30365b,PD30365,PD30365b_ds0001,Glomeruli,Male,83,United Kingdom,Cambridge,Missing,Missing,NA,2753,NA,145
+,PD30365b,PD30365,PD30365b_ds0002,Glomeruli,Male,83,United Kingdom,Cambridge,Missing,Missing,NA,2813,NA,155
+,PD30365b,PD30365,PD30365b_ds0007,Proximal_tubules,Male,83,United Kingdom,Cambridge,Missing,Missing,NA,5140,NA,874
+,PD30365b,PD30365,PD30365b_ds0008,Proximal_tubules,Male,83,United Kingdom,Cambridge,Missing,Missing,NA,6715,NA,1090
+,PD30365b,PD30365,PD30365b_ds0009,Distal_tubules,Male,83,United Kingdom,Cambridge,Missing,Missing,NA,1858,NA,164
+,PD30367b,PD30367,PD30367b_ds0001,Glomeruli,Male,24,United Kingdom,Cambridge,Missing,Missing,NA,762,NA,48
+,PD30367b,PD30367,PD30367b_ds0002,Proximal_tubules,Male,24,United Kingdom,Cambridge,Missing,Missing,NA,953,NA,87
+,PD30367b,PD30367,PD30367b_ds0003,Proximal_tubules,Male,24,United Kingdom,Cambridge,Missing,Missing,NA,1061,NA,83
+,PD30367b,PD30367,PD30367b_ds0004,Glomeruli,Male,24,United Kingdom,Cambridge,Missing,Missing,NA,691,NA,50
+,PD30369b,PD30369,PD30369b_ds0001,Glomeruli,Male,71,United Kingdom,Cambridge,Missing,Missing,NA,2775,NA,152
+,PD30369b,PD30369,PD30369b_ds0002,Glomeruli,Male,71,United Kingdom,Cambridge,Missing,Missing,NA,3100,NA,176
+,PD30369b,PD30369,PD30369b_ds0003,Proximal_tubules,Male,71,United Kingdom,Cambridge,Missing,Missing,NA,6359,NA,982
+,PD30369b,PD30369,PD30369b_ds0004,Proximal_tubules,Male,71,United Kingdom,Cambridge,Missing,Missing,NA,6145,NA,1072
+,PD30369b,PD30369,PD30369b_ds0005,Distal_tubules,Male,71,United Kingdom,Cambridge,Missing,Missing,NA,1817,NA,142
+,PD30378h,PD30378,PD30378h_ds0001,Glomeruli,Male,73,United Kingdom,Cambridge,Missing,Missing,NA,2894,NA,176
+,PD30378h,PD30378,PD30378h_ds0002,Glomeruli,Male,73,United Kingdom,Cambridge,Missing,Missing,NA,2599,NA,141
+,PD30378h,PD30378,PD30378h_ds0003,Proximal_tubules,Male,73,United Kingdom,Cambridge,Missing,Missing,NA,4695,NA,688
+,PD30378h,PD30378,PD30378h_ds0004,Proximal_tubules,Male,73,United Kingdom,Cambridge,Missing,Missing,NA,4744,NA,728
+,PD30380b,PD30380,PD30380b_ds0001,Glomeruli,Female,48,United Kingdom,Cambridge,Missing,Missing,NA,1518,NA,116
+,PD30380b,PD30380,PD30380b_ds0002,Glomeruli,Female,48,United Kingdom,Cambridge,Missing,Missing,NA,1743,NA,68
+,PD30380b,PD30380,PD30380b_ds0003,Proximal_tubules,Female,48,United Kingdom,Cambridge,Missing,Missing,NA,4471,NA,663
+,PD30380b,PD30380,PD30380b_ds0004,Proximal_tubules,Female,48,United Kingdom,Cambridge,Missing,Missing,NA,4266,NA,642
+,PD30380b,PD30380,PD30380b_ds0005,Distal_tubules,Female,48,United Kingdom,Cambridge,Missing,Missing,NA,1230,NA,102
+,PD30388b,PD30388,PD30388b_ds0002,Glomeruli,Female,67,United Kingdom,Cambridge,Missing,Missing,NA,2615,NA,154
+,PD30388b,PD30388,PD30388b_ds0003,Glomeruli,Female,67,United Kingdom,Cambridge,Missing,Missing,NA,2592,NA,126
+,PD30388b,PD30388,PD30388b_ds0007,Proximal_tubules,Female,67,United Kingdom,Cambridge,Missing,Missing,NA,3795,NA,394
+,PD30388b,PD30388,PD30388b_ds0008,Proximal_tubules,Female,67,United Kingdom,Cambridge,Missing,Missing,NA,2502,NA,246
+,PD30407b,PD30407,PD30407b_ds0001,Glomeruli,Male,75,United Kingdom,Cambridge,Missing,Missing,NA,2580,NA,156
+,PD30407b,PD30407,PD30407b_ds0002,Glomeruli,Male,75,United Kingdom,Cambridge,Missing,Missing,NA,2757,NA,139
+,PD30407b,PD30407,PD30407b_ds0003,Proximal_tubules,Male,75,United Kingdom,Cambridge,Missing,Missing,NA,4438,NA,599
+,PD30407b,PD30407,PD30407b_ds0004,Proximal_tubules,Male,75,United Kingdom,Cambridge,Missing,Missing,NA,3852,NA,449
+,PD41750c,PD41750,PD41750c_ds0001,Glomeruli,Female,58,United Kingdom,Cambridge,Missing,Missing,NA,2778,NA,147
+,PD41750c,PD41750,PD41750c_ds0002,Glomeruli,Female,58,United Kingdom,Cambridge,Missing,Missing,NA,2892,NA,130
+,PD41750c,PD41750,PD41750c_ds0007,Proximal_tubules,Female,58,United Kingdom,Cambridge,Missing,Missing,NA,2968,NA,325
+,PD41750c,PD41750,PD41750c_ds0008,Proximal_tubules,Female,58,United Kingdom,Cambridge,Missing,Missing,NA,3234,NA,357
+,PD43850n,PD43850,PD43850n_ds0020,Glomeruli,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2277,NA,124
+,PD43850n,PD43850,PD43850n_ds0022,Glomeruli,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2652,NA,138
+,PD43850n,PD43850,PD43850n_ds0028,Medulla,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2316,NA,270
+,PD43850n,PD43850,PD43850n_ds0029,Medulla,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2523,NA,316
+,PD43850n,PD43850,PD43850n_ds0030,Medulla,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2030,NA,171
+,PD43850n,PD43850,PD43850n_ds0031,Proximal_tubules,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,3044,NA,306
+,PD43850n,PD43850,PD43850n_ds0032,Proximal_tubules,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,3035,NA,389
+,PD43850n,PD43850,PD43850n_ds0033,Proximal_tubules,Female,54,United Kingdom,Cambridge,Missing,Missing,NA,2603,NA,304
+,PD43851o,PD43851,PD43851o_ds0001,Glomeruli,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,2050,NA,108
+,PD43851o,PD43851,PD43851o_ds0002,Glomeruli,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,2100,NA,120
+,PD43851o,PD43851,PD43851o_ds0006,Proximal_tubules,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,3985,NA,645
+,PD43851o,PD43851,PD43851o_ds0007,Proximal_tubules,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,3841,NA,651
+,PD43851o,PD43851,PD43851o_ds0008,Proximal_tubules,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,3443,NA,601
+,PD43851o,PD43851,PD43851o_ds0009,Medulla,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,2530,NA,299
+,PD43851o,PD43851,PD43851o_ds0010,Glomeruli,Male,47,United Kingdom,Cambridge,Missing,Missing,NA,2266,NA,122
+,PD50297s,PD50297,PD50297s_ds0013,Medulla,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,279,NA,13
+,PD50297s,PD50297,PD50297s_ds0014,Medulla,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,317,NA,19
+,PD50297s,PD50297,PD50297s_ds0015,Proximal_tubules,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,473,NA,31
+,PD50297s,PD50297,PD50297s_ds0016,Proximal_tubules,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,565,NA,76
+,PD50297s,PD50297,PD50297s_ds0017,Proximal_tubules,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,430,NA,69
+,PD50297s,PD50297,PD50297s_ds0018,Distal_tubules,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,255,NA,27
+,PD50297s,PD50297,PD50297s_ds0019,Medulla,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,319,NA,20
+,PD50297s,PD50297,PD50297s_ds0001,Glomeruli,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,361,NA,16
+,PD50297s,PD50297,PD50297s_ds0004,Glomeruli,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,406,NA,20
+,PD50297s,PD50297,PD50297s_ds0010,Glomeruli,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,420,NA,28
+,PD50297s,PD50297,PD50297s_ds0011,Glomeruli,Male,9,United Kingdom,Cambridge,Missing,Missing,NA,377,NA,21
+,PD56385h,PD56385,PD56385h_ds0001,Glomeruli,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1412,NA,82
+,PD56385h,PD56385,PD56385h_ds0002,Glomeruli,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1400,NA,82
+,PD56385h,PD56385,PD56385h_ds0005,Medulla,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,919,NA,42
+,PD56385h,PD56385,PD56385h_ds0006,Medulla,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1087,NA,63
+,PD56385h,PD56385,PD56385h_ds0007,Proximal_tubules,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,2093,NA,340
+,PD56385h,PD56385,PD56385h_ds0008,Proximal_tubules,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1587,NA,214
+,PD56385h,PD56385,PD56385h_ds0009,Proximal_tubules,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1835,NA,259
+,PD56385h,PD56385,PD56385h_ds0010,Glomeruli,Female,31,United Kingdom,Cambridge,Missing,Missing,NA,1201,NA,53
+,PD56386h,PD56386,PD56386h_ds0001,Glomeruli,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,639,NA,38
+,PD56386h,PD56386,PD56386h_ds0002,Glomeruli,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,668,NA,32
+,PD56386h,PD56386,PD56386h_ds0005,Proximal_tubules,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,873,NA,99
+,PD56386h,PD56386,PD56386h_ds0006,Proximal_tubules,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,561,NA,39
+,PD56386h,PD56386,PD56386h_ds0007,Proximal_tubules,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,812,NA,68
+,PD56386h,PD56386,PD56386h_ds0008,Distal_tubules,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,357,NA,31
+,PD56386h,PD56386,PD56386h_ds0009,Glomeruli,Female,19,United Kingdom,Cambridge,Missing,Missing,NA,607,NA,24
+PD51269a,PD51269c,PD51269,PD51269c_ds0001,Medulla,Female,67,Thailand,Hat Yai,Never,Never,4557,2314,424,196
+PD51269a,PD51269c,PD51269,PD51269c_ds0002,Medulla,Female,67,Thailand,Hat Yai,Never,Never,4557,2003,424,206
+PD51269a,PD51269c,PD51269,PD51269c_ds0003,Glomeruli,Female,67,Thailand,Hat Yai,Never,Never,4557,2178,424,143
+PD51269a,PD51269c,PD51269,PD51269c_ds0004,Glomeruli,Female,67,Thailand,Hat Yai,Never,Never,4557,2219,424,144
+PD51269a,PD51269c,PD51269,PD51269c_ds0005,Proximal_tubules,Female,67,Thailand,Hat Yai,Never,Never,4557,3577,424,343
+PD51269a,PD51269c,PD51269,PD51269c_ds0006,Proximal_tubules,Female,67,Thailand,Hat Yai,Never,Never,4557,4794,424,568
+PD42581a,PD42581c,PD42581,PD42581c_ds0002,Glomeruli,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1345,311,118
+PD42581a,PD42581c,PD42581,PD42581c_ds0003,Glomeruli,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1545,311,77
+PD42581a,PD42581c,PD42581,PD42581c_ds0004,Glomeruli,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1491,311,74
+PD42581a,PD42581c,PD42581,PD42581c_ds0007,Proximal_tubules,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1880,311,233
+PD42581a,PD42581c,PD42581,PD42581c_ds0009,Proximal_tubules,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1708,311,197
+PD42581a,PD42581c,PD42581,PD42581c_ds0010,Medulla,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1532,311,125
+PD42581a,PD42581c,PD42581,PD42581c_ds0011,Medulla,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1294,311,103
+PD42581a,PD42581c,PD42581,PD42581c_ds0012,Medulla,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1124,311,64
+PD47586a,PD47586c,PD47586,PD47586c_ds0001,Glomeruli,Female,36,Serbia,Belgrade,Current smoker,Never,2621,1234,425,101
+PD47586a,PD47586c,PD47586,PD47586c_ds0002,Glomeruli,Female,36,Serbia,Belgrade,Current smoker,Never,2621,1089,425,82
+PD47586a,PD47586c,PD47586,PD47586c_ds0003,Proximal_tubules,Female,36,Serbia,Belgrade,Current smoker,Never,2621,1450,425,201
+PD47586a,PD47586c,PD47586,PD47586c_ds0004,Proximal_tubules,Female,36,Serbia,Belgrade,Current smoker,Never,2621,1631,425,185
+PD47586a,PD47586c,PD47586,PD47586c_ds0005,Medulla,Female,36,Serbia,Belgrade,Current smoker,Never,2621,813,425,53
+PD47586a,PD47586c,PD47586,PD47586c_ds0006,Medulla,Female,36,Serbia,Belgrade,Current smoker,Never,2621,902,425,79
+PD47592a,PD47592c,PD47592,PD47592c_ds0001,Glomeruli,Male,61,Serbia,Belgrade,Current smoker,Current drinker,66007,2874,2227,144
+PD47592a,PD47592c,PD47592,PD47592c_ds0002,Proximal_tubules,Male,61,Serbia,Belgrade,Current smoker,Current drinker,66007,5597,2227,564
+PD47596a,PD47596c,PD47596,PD47596c_ds0001,Glomeruli,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,2702,2047,192
+PD47596a,PD47596c,PD47596,PD47596c_ds0002,Medulla,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,2472,2047,245
+PD47596a,PD47596c,PD47596,PD47596c_ds0003,Medulla,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,2461,2047,459
+PD47596a,PD47596c,PD47596,PD47596c_ds0004,Medulla,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,1924,2047,148
+PD47596a,PD47596c,PD47596,PD47596c_ds0005,Proximal_tubules,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,8978,2047,2012
+PD51227a,PD51227c,PD51227,PD51227c_ds0001,Glomeruli,Male,43,Russia,Moscow,Never,Never,3272,1405,439,54
+PD51227a,PD51227c,PD51227,PD51227c_ds0002,Glomeruli,Male,43,Russia,Moscow,Never,Never,3272,1930,439,60
+PD51227a,PD51227c,PD51227,PD51227c_ds0003,Glomeruli,Male,43,Russia,Moscow,Never,Never,3272,1713,439,129
+PD51227a,PD51227c,PD51227,PD51227c_ds0004,Medulla,Male,43,Russia,Moscow,Never,Never,3272,1613,439,176
+PD51227a,PD51227c,PD51227,PD51227c_ds0006,Medulla,Male,43,Russia,Moscow,Never,Never,3272,1207,439,97
+PD51227a,PD51227c,PD51227,PD51227c_ds0007,Proximal_tubules,Male,43,Russia,Moscow,Never,Never,3272,3936,439,580
+PD51227a,PD51227c,PD51227,PD51227c_ds0008,Proximal_tubules,Male,43,Russia,Moscow,Never,Never,3272,3936,439,623
+PD42882a,PD42882c,PD42882,PD42882c_ds0001,Glomeruli,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,2475,1217,181
+PD42882a,PD42882c,PD42882,PD42882c_ds0002,Glomeruli,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,2499,1217,111
+PD42882a,PD42882c,PD42882,PD42882c_ds0003,Medulla,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,4408,1217,499
+PD42882a,PD42882c,PD42882,PD42882c_ds0004,Medulla,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,3474,1217,321
+PD42882a,PD42882c,PD42882,PD42882c_ds0005,Medulla,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,1923,1217,136
+PD42882a,PD42882c,PD42882,PD42882c_ds0006,Proximal_tubules,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,6046,1217,814
+PD42882a,PD42882c,PD42882,PD42882c_ds0007,Proximal_tubules,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,5775,1217,698
+PD42885a,PD42885c,PD42885,PD42885c_ds0006,Proximal_tubules,Female,52,Romania,Bucharest,Current smoker,Never,8324,5455,608,357
+PD42885a,PD42885c,PD42885,PD42885c_ds0007,Proximal_tubules,Female,52,Romania,Bucharest,Current smoker,Never,8324,5662,608,481
+PD42885a,PD42885c,PD42885,PD42885c_ds0017,Proximal_tubules,Female,52,Romania,Bucharest,Current smoker,Never,8324,5126,608,614
+PD42885a,PD42885c,PD42885,PD42885c_ds0020,Distal_tubules,Female,52,Romania,Bucharest,Current smoker,Never,8324,1613,608,90
+PD42885a,PD42885c,PD42885,PD42885c_ds0019,Proximal_tubules,Female,52,Romania,Bucharest,Current smoker,Never,8324,5809,608,648
+PD42885a,PD42885c,PD42885,PD42885c_ds0001,Glomeruli,Female,52,Romania,Bucharest,Current smoker,Never,8324,2265,608,80
+PD42885a,PD42885c,PD42885,PD42885c_ds0011,Glomeruli,Female,52,Romania,Bucharest,Current smoker,Never,8324,2652,608,150
+PD42885a,PD42885c,PD42885,PD42885c_ds0012,Glomeruli,Female,52,Romania,Bucharest,Current smoker,Never,8324,2516,608,142
+PD42885a,PD42885c,PD42885,PD42885c_ds0014,Medulla,Female,52,Romania,Bucharest,Current smoker,Never,8324,1594,608,113
+PD42885a,PD42885c,PD42885,PD42885c_ds0015,Medulla,Female,52,Romania,Bucharest,Current smoker,Never,8324,1387,608,189
+PD42885a,PD42885c,PD42885,PD42885c_ds0016,Medulla,Female,52,Romania,Bucharest,Current smoker,Never,8324,1721,608,99
+PD42887a,PD42887c,PD42887,PD42887c_ds0001,Distal_tubules,Female,75,Romania,Bucharest,Never,Never,15386,3665,1578,223
+PD42887a,PD42887c,PD42887,PD42887c_ds0002,Medulla,Female,75,Romania,Bucharest,Never,Never,15386,4372,1578,348
+PD42887a,PD42887c,PD42887,PD42887c_ds0003,Medulla,Female,75,Romania,Bucharest,Never,Never,15386,4102,1578,186
+PD42887a,PD42887c,PD42887,PD42887c_ds0004,Medulla,Female,75,Romania,Bucharest,Never,Never,15386,3442,1578,177
+PD42887a,PD42887c,PD42887,PD42887c_ds0005,Glomeruli,Female,75,Romania,Bucharest,Never,Never,15386,4840,1578,189
+PD42887a,PD42887c,PD42887,PD42887c_ds0006,Glomeruli,Female,75,Romania,Bucharest,Never,Never,15386,5272,1578,192
+PD42887a,PD42887c,PD42887,PD42887c_ds0007,Glomeruli,Female,75,Romania,Bucharest,Never,Never,15386,4962,1578,164
+PD42887a,PD42887c,PD42887,PD42887c_ds0008,Proximal_tubules,Female,75,Romania,Bucharest,Never,Never,15386,18040,1578,1139
+PD42887a,PD42887c,PD42887,PD42887c_ds0009,Proximal_tubules,Female,75,Romania,Bucharest,Never,Never,15386,24152,1578,1249
+PD42893a,PD42893c,PD42893,PD42893c_ds0004,Proximal_tubules,Female,59,Romania,Bucharest,Current smoker,Never,4783,3744,698,420
+PD42893a,PD42893c,PD42893,PD42893c_ds0005,Proximal_tubules,Female,59,Romania,Bucharest,Current smoker,Never,4783,4224,698,396
+PD42893a,PD42893c,PD42893,PD42893c_ds0006,Proximal_tubules,Female,59,Romania,Bucharest,Current smoker,Never,4783,3480,698,487
+PD42893a,PD42893c,PD42893,PD42893c_ds0011,Proximal_tubules,Female,59,Romania,Bucharest,Current smoker,Never,4783,3163,698,274
+PD42893a,PD42893c,PD42893,PD42893c_ds0001,Glomeruli,Female,59,Romania,Bucharest,Current smoker,Never,4783,2443,698,106
+PD42893a,PD42893c,PD42893,PD42893c_ds0002,Glomeruli,Female,59,Romania,Bucharest,Current smoker,Never,4783,2470,698,156
+PD42893a,PD42893c,PD42893,PD42893c_ds0003,Glomeruli,Female,59,Romania,Bucharest,Current smoker,Never,4783,2452,698,133
+PD42893a,PD42893c,PD42893,PD42893c_ds0007,Medulla,Female,59,Romania,Bucharest,Current smoker,Never,4783,2505,698,295
+PD42893a,PD42893c,PD42893,PD42893c_ds0008,Medulla,Female,59,Romania,Bucharest,Current smoker,Never,4783,3269,698,356
+PD42893a,PD42893c,PD42893,PD42893c_ds0009,Medulla,Female,59,Romania,Bucharest,Current smoker,Never,4783,3071,698,314
+PD42894a,PD42894c,PD42894,PD42894c_ds0001,Proximal_tubules,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,19687,2092,1892
+PD42894a,PD42894c,PD42894,PD42894c_ds0002,Proximal_tubules,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,18728,2092,1885
+PD42894a,PD42894c,PD42894,PD42894c_ds0003,Medulla,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,2995,2092,232
+PD42894a,PD42894c,PD42894,PD42894c_ds0004,Medulla,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,2455,2092,159
+PD42894a,PD42894c,PD42894,PD42894c_ds0005,Glomeruli,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,3063,2092,191
+PD42894a,PD42894c,PD42894,PD42894c_ds0006,Glomeruli,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,5224,2092,227
+PD42894a,PD42894c,PD42894,PD42894c_ds0007,Glomeruli,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,5358,2092,186
+PD42894a,PD42894c,PD42894,PD42894c_ds0008,Distal_tubules,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,3118,2092,305
+PD42905a,PD42905c,PD42905,PD42905c_ds0004,Proximal_tubules,Female,73,Romania,Bucharest,Never,Never,20142,30911,985,1448
+PD42905a,PD42905c,PD42905,PD42905c_ds0009,Proximal_tubules,Female,73,Romania,Bucharest,Never,Never,20142,36095,985,1622
+PD42905a,PD42905c,PD42905,PD42905c_ds0005,Glomeruli,Female,73,Romania,Bucharest,Never,Never,20142,5853,985,231
+PD42905a,PD42905c,PD42905,PD42905c_ds0006,Glomeruli,Female,73,Romania,Bucharest,Never,Never,20142,5466,985,217
+PD42905a,PD42905c,PD42905,PD42905c_ds0007,Glomeruli,Female,73,Romania,Bucharest,Never,Never,20142,4883,985,158
+PD42905a,PD42905c,PD42905,PD42905c_ds0001,Medulla,Female,73,Romania,Bucharest,Never,Never,20142,3431,985,155
+PD42905a,PD42905c,PD42905,PD42905c_ds0002,Medulla,Female,73,Romania,Bucharest,Never,Never,20142,4342,985,320
+PD42905a,PD42905c,PD42905,PD42905c_ds0003,Medulla,Female,73,Romania,Bucharest,Never,Never,20142,4041,985,201
+PD42905a,PD42905c,PD42905,PD42905c_ds0010,Proximal_tubules,Female,73,Romania,Bucharest,Never,Never,20142,42937,985,1748
+PD51541a,PD51541c,PD51541,PD51541c_ds0004,Proximal_tubules,Female,61,Romania,Bucharest,Never,Never,4442,4053,480,497
+PD51541a,PD51541c,PD51541,PD51541c_ds0005,Proximal_tubules,Female,61,Romania,Bucharest,Never,Never,4442,5153,480,700
+PD51541a,PD51541c,PD51541,PD51541c_ds0006,Proximal_tubules,Female,61,Romania,Bucharest,Never,Never,4442,4476,480,619
+PD51541a,PD51541c,PD51541,PD51541c_ds0001,Glomeruli,Female,61,Romania,Bucharest,Never,Never,4442,2214,480,180
+PD51541a,PD51541c,PD51541,PD51541c_ds0002,Glomeruli,Female,61,Romania,Bucharest,Never,Never,4442,2070,480,149
+PD51541a,PD51541c,PD51541,PD51541c_ds0003,Glomeruli,Female,61,Romania,Bucharest,Never,Never,4442,2123,480,160
+PD51541a,PD51541c,PD51541,PD51541c_ds0007,Medulla,Female,61,Romania,Bucharest,Never,Never,4442,1867,480,131
+PD51541a,PD51541c,PD51541,PD51541c_ds0008,Medulla,Female,61,Romania,Bucharest,Never,Never,4442,2357,480,258
+PD51541a,PD51541c,PD51541,PD51541c_ds0009,Medulla,Female,61,Romania,Bucharest,Never,Never,4442,1647,480,128
+PD51544a,PD51544c,PD51544,PD51544c_ds0001,Medulla,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,2654,749,151
+PD51544a,PD51544c,PD51544,PD51544c_ds0002,Medulla,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,2933,749,99
+PD51544a,PD51544c,PD51544,PD51544c_ds0003,Medulla,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,3214,749,197
+PD51544a,PD51544d,PD51544,PD51544d_ds0002,Proximal_tubules,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,11797,749,856
+PD51544a,PD51544d,PD51544,PD51544d_ds0003,Proximal_tubules,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,11019,749,784
+PD51544a,PD51544d,PD51544,PD51544d_ds0004,Proximal_tubules,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,12939,749,1029
+PD51544a,PD51544d,PD51544,PD51544d_ds0005,Distal_tubules,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,4477,749,231
+PD51544a,PD51544d,PD51544,PD51544d_ds0001,Glomeruli,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,3124,749,191
+PD51544a,PD51544d,PD51544,PD51544d_ds0006,Glomeruli,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,2945,749,182
+PD51544a,PD51544d,PD51544,PD51544d_ds0007,Glomeruli,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,2835,749,182
+PD51544a,PD51544d,PD51544,PD51544d_ds0010,Distal_tubules,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,4209,749,252
+PD50630a,PD50630c,PD50630,PD50630c_ds0001,Glomeruli,Female,81,Lithuania,Vilnius,Never,Current drinker,7630,2451,1265,186
+PD50630a,PD50630c,PD50630,PD50630c_ds0002,Proximal_tubules,Female,81,Lithuania,Vilnius,Never,Current drinker,7630,5906,1265,1049
+PD67534a,PD67534b,PD67534,PD67534c_ds0001,Glomeruli,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,3236,821,229
+PD67534a,PD67534b,PD67534,PD67534c_ds0002,Proximal_tubules,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,8318,821,889
+PD67534a,PD67534b,PD67534,PD67534c_ds0003,Proximal_tubules,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,7854,821,889
+PD67534a,PD67534b,PD67534,PD67534c_ds0004,Medulla,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,2384,821,220
+PD67534a,PD67534b,PD67534,PD67534c_ds0005,Glomeruli,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,1731,821,173
+PD67535a,PD67535b,PD67535,PD67535c_ds0001,Glomeruli,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,3085,611,129
+PD67535a,PD67535b,PD67535,PD67535c_ds0002,Glomeruli,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,3131,611,142
+PD67535a,PD67535b,PD67535,PD67535c_ds0003,Proximal_tubules,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,4556,611,279
+PD67535a,PD67535b,PD67535,PD67535c_ds0004,Proximal_tubules,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,4615,611,349
+PD67535a,PD67535b,PD67535,PD67535c_ds0005,Medulla,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,3154,611,211
+PD67535a,PD67535b,PD67535,PD67535c_ds0006,Glomeruli,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,1438,611,106
+PD67536a,PD67536b,PD67536,PD67536c_ds0001,Glomeruli,Male,65,Japan,Tokyo,Never,Never,2785,1986,247,120
+PD67536a,PD67536b,PD67536,PD67536c_ds0002,Glomeruli,Male,65,Japan,Tokyo,Never,Never,2785,2020,247,127
+PD67536a,PD67536b,PD67536,PD67536c_ds0003,Proximal_tubules,Male,65,Japan,Tokyo,Never,Never,2785,3822,247,246
+PD67537a,PD67537b,PD67537,PD67537c_ds0001,Glomeruli,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,4586,2079,567,134
+PD67537a,PD67537b,PD67537,PD67537c_ds0002,Glomeruli,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,4586,2040,567,121
+PD67537a,PD67537b,PD67537,PD67537c_ds0003,Proximal_tubules,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,4586,2744,567,328
+PD67537a,PD67537b,PD67537,PD67537c_ds0004,Proximal_tubules,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,4586,2643,567,287
+PD67538a,PD67538b,PD67538,PD67538c_ds0001,Glomeruli,Female,62,Japan,Tokyo,Never,Never,1749,1985,152,136
+PD67538a,PD67538b,PD67538,PD67538c_ds0002,Glomeruli,Female,62,Japan,Tokyo,Never,Never,1749,1943,152,135
+PD67538a,PD67538b,PD67538,PD67538c_ds0003,Proximal_tubules,Female,62,Japan,Tokyo,Never,Never,1749,2823,152,264
+PD67538a,PD67538b,PD67538,PD67538c_ds0004,Proximal_tubules,Female,62,Japan,Tokyo,Never,Never,1749,3218,152,224
+PD67538a,PD67538b,PD67538,PD67538c_ds0005,Medulla,Female,62,Japan,Tokyo,Never,Never,1749,1583,152,138
+PD67539a,PD67539b,PD67539,PD67539c_ds0001,Glomeruli,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,2107,260,140
+PD67539a,PD67539b,PD67539,PD67539c_ds0002,Glomeruli,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,2068,260,144
+PD67539a,PD67539b,PD67539,PD67539c_ds0003,Medulla,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,1591,260,129
+PD67539a,PD67539b,PD67539,PD67539c_ds0004,Proximal_tubules,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,2643,260,223
+PD67539a,PD67539b,PD67539,PD67539c_ds0005,Proximal_tubules,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,3029,260,254
+PD67539a,PD67539b,PD67539,PD67539c_ds0006,Glomeruli,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,1346,260,88
+PD67540a,PD67540b,PD67540,PD67540c_ds0001,Glomeruli,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,2017,473,115
+PD67540a,PD67540b,PD67540,PD67540c_ds0002,Glomeruli,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,2208,473,142
+PD67540a,PD67540b,PD67540,PD67540c_ds0003,Proximal_tubules,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,2768,473,248
+PD67540a,PD67540b,PD67540,PD67540c_ds0004,Proximal_tubules,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,2890,473,292
+PD67540a,PD67540b,PD67540,PD67540c_ds0005,Medulla,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,1806,473,131
+PD67540a,PD67540b,PD67540,PD67540c_ds0006,Medulla,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,1914,473,138
+PD67541a,PD67541b,PD67541,PD67541c_ds0001,Glomeruli,Male,63,Japan,Tokyo,Never,Current drinker,4372,2382,623,118
+PD67541a,PD67541b,PD67541,PD67541c_ds0002,Glomeruli,Male,63,Japan,Tokyo,Never,Current drinker,4372,2328,623,134
+PD67541a,PD67541b,PD67541,PD67541c_ds0003,Proximal_tubules,Male,63,Japan,Tokyo,Never,Current drinker,4372,4595,623,426
+PD67541a,PD67541b,PD67541,PD67541c_ds0004,Proximal_tubules,Male,63,Japan,Tokyo,Never,Current drinker,4372,5376,623,784
+PD67542a,PD67542b,PD67542,PD67542c_ds0001,Glomeruli,Male,77,Japan,Tokyo,Never,Current drinker,7059,2513,905,203
+PD67542a,PD67542b,PD67542,PD67542c_ds0002,Glomeruli,Male,77,Japan,Tokyo,Never,Current drinker,7059,2574,905,186
+PD67542a,PD67542b,PD67542,PD67542c_ds0003,Proximal_tubules,Male,77,Japan,Tokyo,Never,Current drinker,7059,6288,905,710
+PD67542a,PD67542b,PD67542,PD67542c_ds0004,Proximal_tubules,Male,77,Japan,Tokyo,Never,Current drinker,7059,5958,905,544
+PD67543a,PD67543b,PD67543,PD67543c_ds0001,Glomeruli,Female,36,Japan,Tokyo,Ex-smoker,Current drinker,1264,1380,129,98
+PD67543a,PD67543b,PD67543,PD67543c_ds0002,Glomeruli,Female,36,Japan,Tokyo,Ex-smoker,Current drinker,1264,1238,129,90
+PD67543a,PD67543b,PD67543,PD67543c_ds0003,Proximal_tubules,Female,36,Japan,Tokyo,Ex-smoker,Current drinker,1264,1492,129,137
+PD67543a,PD67543b,PD67543,PD67543c_ds0004,Proximal_tubules,Female,36,Japan,Tokyo,Ex-smoker,Current drinker,1264,1461,129,127
+PD67544a,PD67544b,PD67544,PD67544c_ds0001,Glomeruli,Female,81,Japan,Tokyo,Never,Never,5284,2814,675,156
+PD67544a,PD67544b,PD67544,PD67544c_ds0002,Glomeruli,Female,81,Japan,Tokyo,Never,Never,5284,2945,675,149
+PD67544a,PD67544b,PD67544,PD67544c_ds0003,Proximal_tubules,Female,81,Japan,Tokyo,Never,Never,5284,5183,675,469
+PD67544a,PD67544b,PD67544,PD67544c_ds0004,Proximal_tubules,Female,81,Japan,Tokyo,Never,Never,5284,4533,675,286
+PD67544a,PD67544b,PD67544,PD67544c_ds0005,Medulla,Female,81,Japan,Tokyo,Never,Never,5284,2048,675,132
+PD67545a,PD67545b,PD67545,PD67545c_ds0001,Glomeruli,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,2546,581,141
+PD67545a,PD67545b,PD67545,PD67545c_ds0002,Glomeruli,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,2498,581,191
+PD67545a,PD67545b,PD67545,PD67545c_ds0003,Proximal_tubules,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,3862,581,322
+PD67545a,PD67545b,PD67545,PD67545c_ds0004,Proximal_tubules,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,4630,581,487
+PD67545a,PD67545b,PD67545,PD67545c_ds0005,Medulla,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,2064,581,163
+PD67545a,PD67545b,PD67545,PD67545c_ds0006,Distal_tubules,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,1684,581,146
+PD67546a,PD67546b,PD67546,PD67546c_ds0001,Glomeruli,Female,76,Japan,Tokyo,Never,Never,5185,2204,409,149
+PD67546a,PD67546b,PD67546,PD67546c_ds0002,Glomeruli,Female,76,Japan,Tokyo,Never,Never,5185,2391,409,124
+PD67546a,PD67546b,PD67546,PD67546c_ds0003,Proximal_tubules,Female,76,Japan,Tokyo,Never,Never,5185,6044,409,385
+PD67546a,PD67546b,PD67546,PD67546c_ds0004,Proximal_tubules,Female,76,Japan,Tokyo,Never,Never,5185,6458,409,406
+PD67546a,PD67546b,PD67546,PD67546c_ds0005,Medulla,Female,76,Japan,Tokyo,Never,Never,5185,1836,409,137
+PD67546a,PD67546b,PD67546,PD67546c_ds0006,Distal_tubules,Female,76,Japan,Tokyo,Never,Never,5185,1569,409,176
+PD67547a,PD67547b,PD67547,PD67547c_ds0001,Glomeruli,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,6721,2839,645,187
+PD67547a,PD67547b,PD67547,PD67547c_ds0002,Glomeruli,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,6721,2896,645,180
+PD67547a,PD67547b,PD67547,PD67547c_ds0003,Proximal_tubules,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,6721,5772,645,432
+PD67547a,PD67547b,PD67547,PD67547c_ds0004,Proximal_tubules,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,6721,5773,645,438
+PD67548a,PD67548b,PD67548,PD67548c_ds0001,Glomeruli,Male,50,Japan,Tokyo,Current smoker,Current drinker,3565,1872,450,120
+PD67548a,PD67548b,PD67548,PD67548c_ds0002,Glomeruli,Male,50,Japan,Tokyo,Current smoker,Current drinker,3565,1908,450,108
+PD67548a,PD67548b,PD67548,PD67548c_ds0003,Proximal_tubules,Male,50,Japan,Tokyo,Current smoker,Current drinker,3565,2336,450,194
+PD67548a,PD67548b,PD67548,PD67548c_ds0004,Proximal_tubules,Male,50,Japan,Tokyo,Current smoker,Current drinker,3565,2023,450,223
+PD67549a,PD67549b,PD67549,PD67549c_ds0001,Glomeruli,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,2220,594,141
+PD67549a,PD67549b,PD67549,PD67549c_ds0002,Glomeruli,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,2215,594,166
+PD67549a,PD67549b,PD67549,PD67549c_ds0003,Proximal_tubules,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,4258,594,550
+PD67549a,PD67549b,PD67549,PD67549c_ds0004,Proximal_tubules,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,4245,594,549
+PD67549a,PD67549b,PD67549,PD67549c_ds0005,Medulla,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,1607,594,76
+PD67550a,PD67550b,PD67550,PD67550c_ds0001,Glomeruli,Male,52,Japan,Tokyo,Never,Current drinker,2957,1621,384,106
+PD67550a,PD67550b,PD67550,PD67550c_ds0002,Glomeruli,Male,52,Japan,Tokyo,Never,Current drinker,2957,1553,384,83
+PD67550a,PD67550b,PD67550,PD67550c_ds0003,Proximal_tubules,Male,52,Japan,Tokyo,Never,Current drinker,2957,2235,384,275
+PD67550a,PD67550b,PD67550,PD67550c_ds0005,Medulla,Male,52,Japan,Tokyo,Never,Current drinker,2957,1120,384,95
+PD67550a,PD67550b,PD67550,PD67550c_ds0006,Medulla,Male,52,Japan,Tokyo,Never,Current drinker,2957,1276,384,94
+PD67551a,PD67551b,PD67551,PD67551c_ds0001,Glomeruli,Male,62,Japan,Tokyo,Never,Never,3408,1963,540,148
+PD67551a,PD67551b,PD67551,PD67551c_ds0002,Glomeruli,Male,62,Japan,Tokyo,Never,Never,3408,1936,540,163
+PD67551a,PD67551b,PD67551,PD67551c_ds0003,Proximal_tubules,Male,62,Japan,Tokyo,Never,Never,3408,2847,540,390
+PD67551a,PD67551b,PD67551,PD67551c_ds0004,Proximal_tubules,Male,62,Japan,Tokyo,Never,Never,3408,2873,540,434
+PD67551a,PD67551b,PD67551,PD67551c_ds0005,Medulla,Male,62,Japan,Tokyo,Never,Never,3408,1518,540,128
+PD67551a,PD67551b,PD67551,PD67551c_ds0006,Medulla,Male,62,Japan,Tokyo,Never,Never,3408,1356,540,104
+PD67552a,PD67552b,PD67552,PD67552c_ds0001,Glomeruli,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,2347,487,127
+PD67552a,PD67552b,PD67552,PD67552c_ds0002,Glomeruli,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,2206,487,145
+PD67552a,PD67552b,PD67552,PD67552c_ds0003,Proximal_tubules,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,2504,487,251
+PD67552a,PD67552b,PD67552,PD67552c_ds0004,Proximal_tubules,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,2832,487,301
+PD67552a,PD67552b,PD67552,PD67552c_ds0005,Medulla,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,1816,487,100
+PD67552a,PD67552b,PD67552,PD67552c_ds0006,Medulla,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,1673,487,129
+PD67553a,PD67553b,PD67553,PD67553c_ds0001,Glomeruli,Female,82,Japan,Tokyo,Never,Current drinker,4026,2477,560,172
+PD67553a,PD67553b,PD67553,PD67553c_ds0002,Glomeruli,Female,82,Japan,Tokyo,Never,Current drinker,4026,2581,560,182
+PD67553a,PD67553b,PD67553,PD67553c_ds0003,Proximal_tubules,Female,82,Japan,Tokyo,Never,Current drinker,4026,5026,560,507
+PD67553a,PD67553b,PD67553,PD67553c_ds0004,Proximal_tubules,Female,82,Japan,Tokyo,Never,Current drinker,4026,5416,560,555
+PD67553a,PD67553b,PD67553,PD67553c_ds0005,Medulla,Female,82,Japan,Tokyo,Never,Current drinker,4026,2005,560,161
+PD67553a,PD67553b,PD67553,PD67553c_ds0006,Medulla,Female,82,Japan,Tokyo,Never,Current drinker,4026,1948,560,143
+PD67554a,PD67554b,PD67554,PD67554c_ds0001,Glomeruli,Male,65,Japan,Tokyo,Ex-smoker,Never,6306,2572,719,168
+PD67554a,PD67554b,PD67554,PD67554c_ds0002,Proximal_tubules,Male,65,Japan,Tokyo,Ex-smoker,Never,6306,3677,719,368
+PD67554a,PD67554b,PD67554,PD67554c_ds0003,Medulla,Male,65,Japan,Tokyo,Ex-smoker,Never,6306,2413,719,177
+PD67554a,PD67554b,PD67554,PD67554c_ds0004,Medulla,Male,65,Japan,Tokyo,Ex-smoker,Never,6306,2287,719,163
+PD67555a,PD67555b,PD67555,PD67555c_ds0001,Glomeruli,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,1835,471,170
+PD67555a,PD67555b,PD67555,PD67555c_ds0002,Glomeruli,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,2031,471,161
+PD67555a,PD67555b,PD67555,PD67555c_ds0003,Proximal_tubules,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,2280,471,251
+PD67555a,PD67555b,PD67555,PD67555c_ds0004,Proximal_tubules,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,2442,471,244
+PD67555a,PD67555b,PD67555,PD67555c_ds0005,Medulla,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,1778,471,178
+PD67556a,PD67556b,PD67556,PD67556c_ds0001,Glomeruli,Male,52,Japan,Tokyo,Never,Current drinker,2264,1533,225,107
+PD67556a,PD67556b,PD67556,PD67556c_ds0002,Glomeruli,Male,52,Japan,Tokyo,Never,Current drinker,2264,1571,225,111
+PD67556a,PD67556b,PD67556,PD67556c_ds0003,Proximal_tubules,Male,52,Japan,Tokyo,Never,Current drinker,2264,2203,225,229
+PD67556a,PD67556b,PD67556,PD67556c_ds0004,Proximal_tubules,Male,52,Japan,Tokyo,Never,Current drinker,2264,2220,225,229
+PD67557a,PD67557b,PD67557,PD67557c_ds0001,Glomeruli,Female,69,Japan,Tokyo,Never,Never,5043,2455,472,169
+PD67557a,PD67557b,PD67557,PD67557c_ds0002,Glomeruli,Female,69,Japan,Tokyo,Never,Never,5043,2282,472,121
+PD67557a,PD67557b,PD67557,PD67557c_ds0003,Proximal_tubules,Female,69,Japan,Tokyo,Never,Never,5043,3684,472,312
+PD67557a,PD67557b,PD67557,PD67557c_ds0004,Proximal_tubules,Female,69,Japan,Tokyo,Never,Never,5043,3914,472,332
+PD67558a,PD67558b,PD67558,PD67558c_ds0001,Glomeruli,Male,65,Japan,Tokyo,Current smoker,Never,3999,2191,429,132
+PD67558a,PD67558b,PD67558,PD67558c_ds0002,Glomeruli,Male,65,Japan,Tokyo,Current smoker,Never,3999,2255,429,157
+PD67558a,PD67558b,PD67558,PD67558c_ds0003,Proximal_tubules,Male,65,Japan,Tokyo,Current smoker,Never,3999,3209,429,227
+PD67558a,PD67558b,PD67558,PD67558c_ds0004,Proximal_tubules,Male,65,Japan,Tokyo,Current smoker,Never,3999,2864,429,251
+PD67558a,PD67558b,PD67558,PD67558c_ds0005,Medulla,Male,65,Japan,Tokyo,Current smoker,Never,3999,1669,429,125
+PD67559a,PD67559b,PD67559,PD67559c_ds0001,Glomeruli,Male,53,Japan,Tokyo,Never,Current drinker,4078,1697,605,134
+PD67559a,PD67559b,PD67559,PD67559c_ds0002,Glomeruli,Male,53,Japan,Tokyo,Never,Current drinker,4078,1592,605,101
+PD67559a,PD67559b,PD67559,PD67559c_ds0003,Proximal_tubules,Male,53,Japan,Tokyo,Never,Current drinker,4078,2561,605,409
+PD67559a,PD67559b,PD67559,PD67559c_ds0004,Proximal_tubules,Male,53,Japan,Tokyo,Never,Current drinker,4078,2603,605,380
+PD67560a,PD67560b,PD67560,PD67560c_ds0001,Glomeruli,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,1910,210,136
+PD67560a,PD67560b,PD67560,PD67560c_ds0002,Glomeruli,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,1892,210,135
+PD67560a,PD67560b,PD67560,PD67560c_ds0003,Proximal_tubules,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,2036,210,256
+PD67560a,PD67560b,PD67560,PD67560c_ds0004,Proximal_tubules,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,2034,210,216
+PD67560a,PD67560b,PD67560,PD67560c_ds0005,Medulla,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,1620,210,141
+PD67561a,PD67561b,PD67561,PD67561c_ds0001,Glomeruli,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,1779,NA,124
+PD67561a,PD67561b,PD67561,PD67561c_ds0002,Glomeruli,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,1743,NA,94
+PD67561a,PD67561b,PD67561,PD67561c_ds0003,Proximal_tubules,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,2256,NA,252
+PD67561a,PD67561b,PD67561,PD67561c_ds0004,Proximal_tubules,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,2096,NA,200
+PD67561a,PD67561b,PD67561,PD67561c_ds0005,Medulla,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,2247,NA,212
+PD67562a,PD67562b,PD67562,PD67562c_ds0001,Glomeruli,Female,76,Japan,Tokyo,Never,Never,7116,2367,820,138
+PD67562a,PD67562b,PD67562,PD67562c_ds0002,Glomeruli,Female,76,Japan,Tokyo,Never,Never,7116,2166,820,176
+PD67562a,PD67562b,PD67562,PD67562c_ds0003,Proximal_tubules,Female,76,Japan,Tokyo,Never,Never,7116,5559,820,437
+PD67562a,PD67562b,PD67562,PD67562c_ds0004,Proximal_tubules,Female,76,Japan,Tokyo,Never,Never,7116,5827,820,491
+PD67562a,PD67562b,PD67562,PD67562c_ds0005,Distal_tubules,Female,76,Japan,Tokyo,Never,Never,7116,1788,820,163
+PD67563a,PD67563b,PD67563,PD67563c_ds0001,Glomeruli,Male,70,Japan,Tokyo,Current smoker,Current drinker,6695,2715,869,160
+PD67563a,PD67563b,PD67563,PD67563c_ds0002,Glomeruli,Male,70,Japan,Tokyo,Current smoker,Current drinker,6695,2646,869,155
+PD67563a,PD67563b,PD67563,PD67563c_ds0003,Proximal_tubules,Male,70,Japan,Tokyo,Current smoker,Current drinker,6695,5645,869,696
+PD67563a,PD67563b,PD67563,PD67563c_ds0004,Proximal_tubules,Male,70,Japan,Tokyo,Current smoker,Current drinker,6695,6162,869,765
+PD46710a,PD46710c,PD46710,PD46710c_ds0001,Glomeruli,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,2547,1067,171
+PD46710a,PD46710c,PD46710,PD46710c_ds0002,Glomeruli,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,2531,1067,86
+PD46710a,PD46710c,PD46710,PD46710c_ds0003,Medulla,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,5395,1067,1063
+PD46710a,PD46710c,PD46710,PD46710c_ds0004,Medulla,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,4557,1067,727
+PD46710a,PD46710c,PD46710,PD46710c_ds0005,Medulla,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,1804,1067,171
+PD46710a,PD46710c,PD46710,PD46710c_ds0006,Proximal_tubules,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,7120,1067,1496
+PD46710a,PD46710c,PD46710,PD46710c_ds0007,Proximal_tubules,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,6680,1067,1208
+PD46860a,PD46860c,PD46860,PD46860c_ds0001,Glomeruli,Male,75,Czech Republic,Brno,Ex-smoker,Never,3939,3258,340,205
+PD46860a,PD46860c,PD46860,PD46860c_ds0002,Proximal_tubules,Male,75,Czech Republic,Brno,Ex-smoker,Never,3939,8928,340,1645
+PD46860a,PD46860c,PD46860,PD46860c_ds0003,Proximal_tubules,Male,75,Czech Republic,Brno,Ex-smoker,Never,3939,7672,340,1617
+PD46860a,PD46860c,PD46860,PD46860c_ds0004,Medulla,Male,75,Czech Republic,Brno,Ex-smoker,Never,3939,3585,340,445
+PD46866a,PD46866c,PD46866,PD46866c_ds0001,Glomeruli,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,2634,817,141
+PD46866a,PD46866c,PD46866,PD46866c_ds0002,Glomeruli,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,2788,817,107
+PD46866a,PD46866c,PD46866,PD46866c_ds0004,Proximal_tubules,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,6212,817,1012
+PD46866a,PD46866c,PD46866,PD46866c_ds0005,Medulla,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,1880,817,120
+PD46866a,PD46866c,PD46866,PD46866c_ds0006,Medulla,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,3200,817,321
+PD46868a,PD46868c,PD46868,PD46868c_ds0001,Glomeruli,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,2407,1061,112
+PD46868a,PD46868c,PD46868,PD46868c_ds0002,Medulla,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,1985,1061,138
+PD46868a,PD46868c,PD46868,PD46868c_ds0003,Medulla,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,3286,1061,483
+PD46868a,PD46868c,PD46868,PD46868c_ds0004,Medulla,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,1561,1061,119
+PD46868a,PD46868c,PD46868,PD46868c_ds0005,Proximal_tubules,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,5409,1061,1084
+PD46868a,PD46868c,PD46868,PD46868c_ds0006,Proximal_tubules,Male,61,Czech Republic,Olomouc,Current smoker,Current drinker,6784,4677,1061,841
+PD46885a,PD46885c,PD46885,PD46885c_ds0001,Glomeruli,Female,78,Czech Republic,Ceske Budejovice,Never,Never,7903,2411,1300,198
+PD46885a,PD46885c,PD46885,PD46885c_ds0002,Proximal_tubules,Female,78,Czech Republic,Ceske Budejovice,Never,Never,7903,7189,1300,1430
+PD46891a,PD46891c,PD46891,PD46891c_ds0010,Proximal_tubules,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,3285,751,545
+PD46891a,PD46891c,PD46891,PD46891c_ds0011,Proximal_tubules,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,4589,751,669
+PD46891a,PD46891c,PD46891,PD46891c_ds0001,Glomeruli,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,1917,751,136
+PD46891a,PD46891c,PD46891,PD46891c_ds0008,Medulla,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,2016,751,246
+PD46891a,PD46891c,PD46891,PD46891c_ds0009,Medulla,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,1938,751,198
+PD48869a,PD48869c,PD48869,PD48869c_ds0001,Medulla,Male,85,Czech Republic,Olomouc,Never,Never,10099,2326,1457,266
+PD48869a,PD48869c,PD48869,PD48869c_ds0002,Medulla,Male,85,Czech Republic,Olomouc,Never,Never,10099,2654,1457,230
+PD48869a,PD48869c,PD48869,PD48869c_ds0003,Glomeruli,Male,85,Czech Republic,Olomouc,Never,Never,10099,3055,1457,132
+PD48869a,PD48869c,PD48869,PD48869c_ds0004,Proximal_tubules,Male,85,Czech Republic,Olomouc,Never,Never,10099,9007,1457,1218
+PD51213a,PD51213c,PD51213,PD51213c_ds0001,Medulla,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,2688,1310,200
+PD51213a,PD51213c,PD51213,PD51213c_ds0002,Medulla,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,2620,1310,201
+PD51213a,PD51213c,PD51213,PD51213c_ds0003,Glomeruli,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,3670,1310,231
+PD51213a,PD51213c,PD51213,PD51213c_ds0004,Glomeruli,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,2978,1310,225
+PD51213a,PD51213c,PD51213,PD51213c_ds0005,Proximal_tubules,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,7313,1310,1305
+PD51526a,PD51526c,PD51526,PD51526c_ds0001,Glomeruli,Male,58,Czech Republic,Brno,Ex-smoker,Current drinker,3377,2884,375,232
+PD51526a,PD51526c,PD51526,PD51526c_ds0002,Proximal_tubules,Male,58,Czech Republic,Brno,Ex-smoker,Current drinker,3377,4523,375,850
+PD51526a,PD51526c,PD51526,PD51526c_ds0003,Medulla,Male,58,Czech Republic,Brno,Ex-smoker,Current drinker,3377,1658,375,94
+PD51526a,PD51526c,PD51526,PD51526c_ds0004,Medulla,Male,58,Czech Republic,Brno,Ex-smoker,Current drinker,3377,1815,375,124
+PD51667a,PD51667c,PD51667,PD51667c_ds0001,Glomeruli,Female,68,Canada,Toronto,Never,Current drinker,3595,2166,467,127
+PD51667a,PD51667c,PD51667,PD51667c_ds0002,Glomeruli,Female,68,Canada,Toronto,Never,Current drinker,3595,2129,467,148
+PD51667a,PD51667c,PD51667,PD51667c_ds0003,Proximal_tubules,Female,68,Canada,Toronto,Never,Current drinker,3595,2989,467,280
+PD51667a,PD51667c,PD51667,PD51667c_ds0004,Proximal_tubules,Female,68,Canada,Toronto,Never,Current drinker,3595,2864,467,314
+PD51667a,PD51667c,PD51667,PD51667c_ds0005,Medulla,Female,68,Canada,Toronto,Never,Current drinker,3595,2178,467,191
+PD51682a,PD51682c,PD51682,PD51682c_ds0001,Glomeruli,Male,68,Canada,Toronto,Never,Current drinker,8038,2328,1381,187
+PD51682a,PD51682c,PD51682,PD51682c_ds0002,Glomeruli,Male,68,Canada,Toronto,Never,Current drinker,8038,2194,1381,153
+PD51682a,PD51682c,PD51682,PD51682c_ds0003,Medulla,Male,68,Canada,Toronto,Never,Current drinker,8038,2499,1381,389
+PD51682a,PD51682c,PD51682,PD51682c_ds0004,Proximal_tubules,Male,68,Canada,Toronto,Never,Current drinker,8038,3642,1381,782
+PD51682a,PD51682c,PD51682,PD51682c_ds0005,Proximal_tubules,Male,68,Canada,Toronto,Never,Current drinker,8038,3872,1381,770
+PD51695a,PD51695c,PD51695,PD51695c_ds0001,Medulla,Male,68,Canada,Toronto,Current smoker,Current drinker,6080,2558,642,245
+PD51695a,PD51695c,PD51695,PD51695c_ds0002,Glomeruli,Male,68,Canada,Toronto,Current smoker,Current drinker,6080,2983,642,195
+PD51695a,PD51695c,PD51695,PD51695c_ds0003,Proximal_tubules,Male,68,Canada,Toronto,Current smoker,Current drinker,6080,3671,642,424
+PD51695a,PD51695c,PD51695,PD51695c_ds0004,Medulla,Male,68,Canada,Toronto,Current smoker,Current drinker,6080,3039,642,249
+PD51697a,PD51697c,PD51697,PD51697c_ds0001,Glomeruli,Male,68,Canada,Toronto,Never,Never,5504,2168,926,168
+PD51697a,PD51697c,PD51697,PD51697c_ds0002,Glomeruli,Male,68,Canada,Toronto,Never,Never,5504,1921,926,182
+PD51697a,PD51697c,PD51697,PD51697c_ds0003,Proximal_tubules,Male,68,Canada,Toronto,Never,Never,5504,3915,926,526
+PD51702a,PD51702c,PD51702,PD51702c_ds0001,Medulla,Female,72,Canada,Toronto,Never,Current drinker,6776,1949,1258,186
+PD51702a,PD51702c,PD51702,PD51702c_ds0002,Medulla,Female,72,Canada,Toronto,Never,Current drinker,6776,1549,1258,173
+PD51702a,PD51702c,PD51702,PD51702c_ds0003,Glomeruli,Female,72,Canada,Toronto,Never,Current drinker,6776,2330,1258,201
+PD51702a,PD51702c,PD51702,PD51702c_ds0004,Distal_tubules,Female,72,Canada,Toronto,Never,Current drinker,6776,1685,1258,188
+PD51702a,PD51702c,PD51702,PD51702c_ds0005,Proximal_tubules,Female,72,Canada,Toronto,Never,Current drinker,6776,3812,1258,574
+PD51702a,PD51702c,PD51702,PD51702c_ds0006,Proximal_tubules,Female,72,Canada,Toronto,Never,Current drinker,6776,3477,1258,565
+PD51705a,PD51705c,PD51705,PD51526c_ds0005,Medulla,Male,52,Canada,Toronto,Never,Current drinker,5776,1857,690,142
+PD51705a,PD51705c,PD51705,PD51705c_ds0001,Glomeruli,Male,52,Canada,Toronto,Never,Current drinker,5776,1834,690,110
+PD51705a,PD51705c,PD51705,PD51705c_ds0002,Glomeruli,Male,52,Canada,Toronto,Never,Current drinker,5776,1722,690,116
+PD51705a,PD51705c,PD51705,PD51705c_ds0003,Proximal_tubules,Male,52,Canada,Toronto,Never,Current drinker,5776,2306,690,210
+PD51705a,PD51705c,PD51705,PD51705c_ds0004,Proximal_tubules,Male,52,Canada,Toronto,Never,Current drinker,5776,2411,690,324
+PD51705a,PD51705c,PD51705,PD51705c_ds0005,Medulla,Male,52,Canada,Toronto,Never,Current drinker,5776,992,690,105
+PD51705a,PD51705c,PD51705,PD51705c_ds0006,Medulla,Male,52,Canada,Toronto,Never,Current drinker,5776,1978,690,256
+PD51737a,PD51737c,PD51737,PD51737c_ds0001,Glomeruli,Female,62,Canada,Toronto,Current smoker,Never,8420,2773,1215,237
+PD51737a,PD51737c,PD51737,PD51737c_ds0003,Proximal_tubules,Female,62,Canada,Toronto,Current smoker,Never,8420,5495,1215,1372
+PD51737a,PD51737c,PD51737,PD51737c_ds0004,Proximal_tubules,Female,62,Canada,Toronto,Current smoker,Never,8420,6516,1215,1368
+PD51737a,PD51737c,PD51737,PD51737c_ds0005,Distal_tubules,Female,62,Canada,Toronto,Current smoker,Never,8420,1690,1215,151
+PD50153a,PD50153c,PD50153,PD50153c_ds0001,Medulla,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,1646,650,130
+PD50153a,PD50153c,PD50153,PD50153c_ds0002,Medulla,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,1546,650,110
+PD50153a,PD50153c,PD50153,PD50153c_ds0003,Medulla,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,1704,650,125
+PD50153a,PD50153c,PD50153,PD50153c_ds0004,Glomeruli,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,1944,650,128
+PD50153a,PD50153c,PD50153,PD50153c_ds0005,Proximal_tubules,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,4508,650,617
+PD50165a,PD50165c,PD50165,PD50165c_ds0001,Glomeruli,Female,54,Brazil,Porto Alegre,Never,Never,5404,1522,631,89
+PD50165a,PD50165c,PD50165,PD50165c_ds0002,Glomeruli,Female,54,Brazil,Porto Alegre,Never,Never,5404,1541,631,130
+PD50165a,PD50165c,PD50165,PD50165c_ds0003,Medulla,Female,54,Brazil,Porto Alegre,Never,Never,5404,1357,631,157
+PD50165a,PD50165c,PD50165,PD50165c_ds0004,Medulla,Female,54,Brazil,Porto Alegre,Never,Never,5404,1253,631,82
+PD50165a,PD50165c,PD50165,PD50165c_ds0005,Medulla,Female,54,Brazil,Porto Alegre,Never,Never,5404,1242,631,72
+PD50165a,PD50165c,PD50165,PD50165c_ds0006,Distal_tubules,Female,54,Brazil,Porto Alegre,Never,Never,5404,1192,631,168
+PD50165a,PD50165c,PD50165,PD50165c_ds0007,Proximal_tubules,Female,54,Brazil,Porto Alegre,Never,Never,5404,2321,631,361
+PD50165a,PD50165c,PD50165,PD50165c_ds0008,Proximal_tubules,Female,54,Brazil,Porto Alegre,Never,Never,5404,2731,631,354
+PD50168a,PD50168c,PD50168,PD50168c_ds0002,Medulla,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,1305,849,133
+PD50168a,PD50168c,PD50168,PD50168c_ds0004,Glomeruli,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,1494,849,99
+PD50168a,PD50168c,PD50168,PD50168c_ds0005,Glomeruli,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,1657,849,134
+PD50168a,PD50168c,PD50168,PD50168c_ds0006,Proximal_tubules,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,2985,849,420
+PD50168a,PD50168c,PD50168,PD50168c_ds0007,Proximal_tubules,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,2875,849,578
+PD50171a,PD50171c,PD50171,PD50171c_ds0007,Proximal_tubules,Male,51,Brazil,Porto Alegre,Never,Never,4380,2311,788,258
+PD50171a,PD50171c,PD50171,PD50171c_ds0008,Proximal_tubules,Male,51,Brazil,Porto Alegre,Never,Never,4380,1812,788,215
+PD50171a,PD50171c,PD50171,PD50171c_ds0009,Proximal_tubules,Male,51,Brazil,Porto Alegre,Never,Never,4380,2404,788,386
+PD50171a,PD50171c,PD50171,PD50171c_ds0002,Glomeruli,Male,51,Brazil,Porto Alegre,Never,Never,4380,1511,788,132
+PD50171a,PD50171c,PD50171,PD50171c_ds0003,Glomeruli,Male,51,Brazil,Porto Alegre,Never,Never,4380,1346,788,146
+PD50171a,PD50171c,PD50171,PD50171c_ds0004,Glomeruli,Male,51,Brazil,Porto Alegre,Never,Never,4380,1400,788,223
+PD50171a,PD50171c,PD50171,PD50171c_ds0010,Medulla,Male,51,Brazil,Porto Alegre,Never,Never,4380,1315,788,109
+PD50171a,PD50171c,PD50171,PD50171c_ds0011,Medulla,Male,51,Brazil,Porto Alegre,Never,Never,4380,1162,788,91
+PD50171a,PD50171c,PD50171,PD50171c_ds0012,Medulla,Male,51,Brazil,Porto Alegre,Never,Never,4380,2928,788,452
+PD51285a,PD51285c,PD51285,PD51285c_ds0007,Proximal_tubules,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,3155,650,573
+PD51285a,PD51285c,PD51285,PD51285c_ds0008,Proximal_tubules,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,2973,650,557
+PD51285a,PD51285c,PD51285,PD51285c_ds0001,Glomeruli,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1876,650,140
+PD51285a,PD51285c,PD51285,PD51285c_ds0002,Glomeruli,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1750,650,84
+PD51285a,PD51285c,PD51285,PD51285c_ds0003,Glomeruli,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1840,650,96
+PD51285a,PD51285c,PD51285,PD51285c_ds0010,Medulla,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1399,650,102
+PD51285a,PD51285c,PD51285,PD51285c_ds0011,Medulla,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1358,650,108
+PD51285a,PD51285c,PD51285,PD51285c_ds0012,Medulla,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,1419,650,126
+PD51385a,PD51385c,PD51385,PD51385c_ds0009,Proximal_tubules,Female,67,Brazil,Barretos,Never,Never,9358,12835,709,420
+PD51385a,PD51385c,PD51385,PD51385c_ds0010,Proximal_tubules,Female,67,Brazil,Barretos,Never,Never,9358,14011,709,566
+PD51385a,PD51385c,PD51385,PD51385c_ds0011,Proximal_tubules,Female,67,Brazil,Barretos,Never,Never,9358,15474,709,488
+PD51385a,PD51385c,PD51385,PD51385c_ds0003,Glomeruli,Female,67,Brazil,Barretos,Never,Never,9358,4404,709,158
+PD51385a,PD51385c,PD51385,PD51385c_ds0004,Glomeruli,Female,67,Brazil,Barretos,Never,Never,9358,4294,709,161
+PD51385a,PD51385c,PD51385,PD51385c_ds0005,Glomeruli,Female,67,Brazil,Barretos,Never,Never,9358,5048,709,175
+PD51385a,PD51385c,PD51385,PD51385c_ds0001,Medulla,Female,67,Brazil,Barretos,Never,Never,9358,4874,709,179
+PD51385a,PD51385c,PD51385,PD51385c_ds0012,Medulla,Female,67,Brazil,Barretos,Never,Never,9358,3366,709,128
+PD51385a,PD51385c,PD51385,PD51385c_ds0013,Medulla,Female,67,Brazil,Barretos,Never,Never,9358,12309,709,321
+PD51642a,PD51642c,PD51642,PD51642c_ds0001,Medulla,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,1794,590,166
+PD51642a,PD51642c,PD51642,PD51642c_ds0002,Medulla,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,2616,590,278
+PD51642a,PD51642c,PD51642,PD51642c_ds0003,Glomeruli,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,1948,590,130
+PD51642a,PD51642c,PD51642,PD51642c_ds0004,Proximal_tubules,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,2556,590,306
+PD51642a,PD51642c,PD51642,PD51642c_ds0005,Medulla,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,1624,590,164

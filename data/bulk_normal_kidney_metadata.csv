@@ -1,0 +1,301 @@
+Tumor,Normal_Kidney,Sex,Age,Country,City,Tobacco,Alcohol,Tumor_SBS_burden,Normal_SBS_burden,Tumor_ID_burden,Normal_ID_burden
+PD50423a,PD52633b_ds0001,Male,38,United Kingdom,Leeds,Never,Never,NA,1549,NA,155
+PD51571a,PD52632b_ds0001,Female,39,United Kingdom,Leeds,Ex-smoker,Current drinker,1714,1543,173,242
+PD51569a,PD51569c,Male,40,United Kingdom,Leeds,Never,Current drinker,2268,1745,380,150
+PD50441a,PD52634b_ds0001,Female,42,United Kingdom,Leeds,Never,Current drinker,18219,1627,8335,158
+PD51428a,PD52636b_ds0001,Male,46,United Kingdom,Leeds,Current smoker,Current drinker,NA,2756,NA,418
+PD51578a,PD52635b_ds0001,Male,47,United Kingdom,Leeds,Current smoker,Ex-drinker,5778,2409,1037,287
+PD51193a,PD52637b_ds0001,Male,48,United Kingdom,Leeds,Never,Current drinker,NA,2643,NA,446
+PD51574a,PD52638b_ds0001,Female,50,United Kingdom,Leeds,Current smoker,Current drinker,3555,2133,501,223
+PD50444a,PD50444c,Female,52,United Kingdom,Leeds,Current smoker,Current drinker,6890,2873,936,354
+PD51557a,PD51557c,Male,54,United Kingdom,Leeds,Never,Current drinker,4331,2119,592,243
+PD51427a,PD52640b_ds0001,Male,55,United Kingdom,Leeds,Ex-smoker,Current drinker,4313,2194,425,268
+PD50638a,PD52641b_ds0001,Male,59,United Kingdom,Leeds,Current smoker,Current drinker,7775,3044,709,342
+PD51575a,PD52642b_ds0001,Male,61,United Kingdom,Leeds,Never,Current drinker,4101,2405,691,285
+PD51560a,PD51560c,Female,61,United Kingdom,Leeds,Ex-smoker,Current drinker,3291,2776,508,415
+PD51567a,PD51567c,Female,61,United Kingdom,Leeds,Ex-smoker,Current drinker,5287,2610,801,316
+PD51637a,PD52643b_ds0001,Female,62,United Kingdom,Leeds,Current smoker,Current drinker,3663,3819,406,498
+PD51187a,PD51187c,Male,63,United Kingdom,Leeds,Current smoker,Current drinker,9020,3577,1023,423
+PD50425a,PD50425c,Male,69,United Kingdom,Leeds,Never,Current drinker,6665,3464,750,489
+PD51566a,PD51566c,Male,69,United Kingdom,Leeds,Ex-smoker,Current drinker,7642,4579,1362,720
+PD51185a,PD52644b_ds0001,Male,70,United Kingdom,Leeds,Current smoker,Current drinker,4749,3945,625,539
+PD51559a,PD51559c,Male,70,United Kingdom,Leeds,Never,Current drinker,4488,2661,492,320
+PD51184a,PD52647b_ds0001,Female,75,United Kingdom,Leeds,Current smoker,Current drinker,7632,3931,807,432
+PD51191a,PD52648b_ds0001,Female,75,United Kingdom,Leeds,Never,Current drinker,5613,2717,731,253
+PD50641a,PD52649b_ds0001,Male,75,United Kingdom,Leeds,Never,Never,NA,2561,NA,245
+PD51271a,PD51271c,Female,63,Thailand,Hat Yai,Never,Never,4461,2592,469,215
+PD50135a,PD50135c,Male,64,Thailand,Hat Yai,Current smoker,Ex-drinker,5031,3276,738,375
+PD51269a,PD51269c_ds0007,Female,67,Thailand,Hat Yai,Never,Never,4557,2787,424,293
+PD51638a,PD51638c,Female,77,Thailand,Hat Yai,Never,Never,4907,6768,678,323
+PD42596a,PD52620b_ds0001,Male,32,Serbia,Belgrade,Current smoker,Never,2840,1379,555,110
+PD42581a,PD42581c_ds0013,Male,34,Serbia,Belgrade,Current smoker,Never,2354,1694,311,243
+PD42590a,PD52622b_ds0001,Male,42,Serbia,Belgrade,Ex-smoker,Current drinker,5785,2093,572,239
+PD48886a,PD52623b_ds0001,Male,43,Serbia,Belgrade,Ex-smoker,Ex-drinker,2236,1790,415,200
+PD46861a,PD52616b_ds0001,Female,47,Serbia,Belgrade,Current smoker,Never,3353,2585,266,267
+PD47593a,PD52624b_ds0001,Male,51,Serbia,Belgrade,Current smoker,Never,8367,3641,753,254
+PD47592a,PD52626b_ds0001,Male,61,Serbia,Belgrade,Current smoker,Current drinker,66007,3974,2227,384
+PD47592a,PD47592c_ds0003,Male,61,Serbia,Belgrade,Current smoker,Current drinker,66007,3911,2227,422
+PD48902a,PD52627b_ds0001,Female,64,Serbia,Belgrade,Never,Never,8604,3956,1040,203
+PD42591a,PD52628b_ds0001,Male,74,Serbia,Belgrade,Never,Never,45376,15821,1619,684
+PD47596a,PD47596c_ds0006,Male,75,Serbia,Belgrade,Ex-smoker,Never,9926,4306,2047,588
+PD48882a,PD52630b_ds0001,Male,77,Serbia,Belgrade,Never,Never,8804,5659,947,509
+PD48887a,PD52631b_ds0001,Female,79,Serbia,Belgrade,Never,Never,27982,28177,1452,843
+PD46937a,PD52614b_ds0001,Female,23,Russia,Moscow,Never,Never,1970,1331,387,212
+PD46820a,PD46820c,Female,26,Russia,Moscow,Never,Never,1849,1096,169,127
+PD46819a,PD46819c,Male,36,Russia,Moscow,Current smoker,Never,3520,1419,558,174
+PD46914a,PD46914c,Male,36,Russia,Moscow,Ex-smoker,Never,2849,2171,514,271
+PD50201a,PD50201c,Female,40,Russia,Moscow,Never,Never,2935,1644,517,184
+PD50196a,PD50196c,Male,41,Russia,Moscow,Ex-smoker,Never,4642,1900,749,215
+PD46934a,PD52615b_ds0001,Male,43,Russia,Moscow,Current smoker,Never,5609,2350,902,301
+PD46750a,PD46750c,Female,43,Russia,Moscow,Never,Never,3877,1955,504,280
+PD51227a,PD51227c_ds0009,Male,43,Russia,Moscow,Never,Never,3272,2936,439,318
+PD51584a,PD51584c,Female,44,Russia,Moscow,Never,Current drinker,2673,1673,372,202
+PD46911a,PD46911c,Male,46,Russia,Moscow,Never,Never,838,2062,125,307
+PD46721a,PD46721c,Female,47,Russia,Moscow,Never,Never,4618,1970,491,205
+PD46925a,PD46925c,Male,47,Russia,Moscow,Ex-smoker,Never,3479,3153,444,529
+PD51583a,PD51583c,Male,48,Russia,Moscow,Never,Current drinker,3586,2429,536,371
+PD46941a,PD46941c,Male,51,Russia,Moscow,Never,Never,4464,2698,695,392
+PD46724a,PD46724c,Female,52,Russia,Moscow,Never,Never,2562,1961,375,261
+PD51587a,PD51587c,Male,55,Russia,Moscow,Ex-smoker,Current drinker,4373,2704,477,413
+PD46920a,PD46920c,Female,56,Russia,Moscow,Never,Never,2440,2083,356,229
+PD46930a,PD46930c,Male,56,Russia,Moscow,Current smoker,Never,8408,4426,1124,625
+PD51579a,PD51579c,Male,56,Russia,Moscow,Current smoker,Never,6981,3334,641,418
+PD51590a,PD51590c,Female,56,Russia,Moscow,Never,Never,2960,2244,389,242
+PD51721a,PD51721c,Male,56,Russia,Moscow,Current smoker,Never,6399,3140,1213,424
+PD51589a,PD51589c,Female,58,Russia,Moscow,Never,Never,7427,2707,1218,397
+PD46738a,PD46738c,Male,60,Russia,Moscow,Ex-smoker,Never,3622,2884,461,362
+PD46922a,PD46922c,Female,61,Russia,Moscow,Current smoker,Never,5377,3189,868,518
+PD51598a,PD51598c,Female,61,Russia,Moscow,Never,Never,3893,4115,565,440
+PD46935a,PD46935c,Female,62,Russia,Moscow,Never,Never,4579,2914,425,425
+PD51586a,PD51586c,Female,62,Russia,Moscow,Never,Never,1601,2304,206,302
+PD51723a,PD51723c,Male,62,Russia,Moscow,Ex-smoker,Ex-drinker,4757,3183,756,316
+PD51225a,PD51225c,Female,63,Russia,Moscow,Never,Never,6379,3454,1066,461
+PD51224a,PD51224c,Female,64,Russia,Moscow,Never,Never,3821,2765,401,304
+PD48942a,PD48942c,Male,65,Russia,Moscow,Never,Never,12853,2688,1392,347
+PD51239a,PD51239c,Female,65,Russia,Moscow,Never,Never,5054,2695,662,298
+PD51585a,PD51585c,Female,65,Russia,Moscow,Ex-smoker,Current drinker,1731,2705,80,352
+PD51582a,PD51582c,Female,66,Russia,Moscow,Never,Current drinker,4355,2537,721,307
+PD51591a,PD51591c,Male,67,Russia,Moscow,Never,Never,3018,2926,313,463
+PD51599a,PD51599c,Female,76,Russia,Moscow,Never,Never,6111,2914,721,412
+PD51820a,PD52621b_ds0001,Male,36,Romania,Bucharest,Current smoker,Never,3980,1698,716,197
+PD46904a,PD52619b_ds0001,Male,38,Romania,Bucharest,Current smoker,Current drinker,3908,1918,448,189
+PD46958a,PD52610b_ds0001,Male,44,Romania,Bucharest,Never,Current drinker,11525,3947,526,294
+PD42904a,PD42904c,Female,46,Romania,Bucharest,Ex-smoker,Never,5300,2796,645,373
+PD46773a,PD52617b_ds0001,Female,51,Romania,Bucharest,Never,Never,8888,7581,839,517
+PD42885a,PD42885c_ds0021,Female,52,Romania,Bucharest,Current smoker,Never,8324,3956,608,270
+PD46952a,PD53854b_ds0001,Female,53,Romania,Bucharest,Never,Ex-drinker,NA,4967,NA,300
+PD42884a,PD42884c,Male,56,Romania,Bucharest,Never,Current drinker,8536,3633,1224,440
+PD51540a,PD51540c,Male,57,Romania,Bucharest,Ex-smoker,Ex-drinker,16886,7308,1152,670
+PD42891a,PD42891c,Male,58,Romania,Bucharest,Ex-smoker,Current drinker,7855,3546,1086,290
+PD46957a,PD52611b_ds0001,Male,59,Romania,Bucharest,Never,Current drinker,15564,12430,923,558
+PD42903a,PD42903c,Male,59,Romania,Bucharest,Never,Ex-drinker,7285,4063,869,312
+PD42893a,PD42893c_ds0012,Female,59,Romania,Bucharest,Current smoker,Never,4783,2913,698,263
+PD51545a,PD51545c,Female,60,Romania,Bucharest,Ex-smoker,Never,6934,1663,1124,108
+PD51541a,PD51541d,Female,61,Romania,Bucharest,Never,Never,4442,2635,480,249
+PD42886a,PD42886c,Male,62,Romania,Bucharest,Never,Current drinker,8980,3964,871,437
+PD42895a,PD42895c,Male,62,Romania,Bucharest,Never,Ex-drinker,8776,5022,1480,487
+PD42897a,PD42897c,Female,62,Romania,Bucharest,Ex-smoker,Current drinker,11788,9622,997,567
+PD42882a,PD42882c_ds0008,Male,62,Romania,Bucharest,Current smoker,Current drinker,8829,4028,1217,418
+PD46955a,PD46955c,Female,65,Romania,Bucharest,Never,Never,10195,5913,1113,483
+PD46959a,PD46959c,Male,67,Romania,Bucharest,Never,Current drinker,6361,3744,988,368
+PD51542a,PD51542c,Female,69,Romania,Bucharest,Never,Current drinker,17024,7899,877,615
+PD46953a,PD46953c,Female,70,Romania,Bucharest,Never,Never,43229,11380,1400,552
+PD51536a,PD51536c,Male,70,Romania,Bucharest,Ex-smoker,Current drinker,13345,2471,1021,188
+PD51546a,PD51546c,Female,71,Romania,Bucharest,Never,Never,23876,8824,758,567
+PD51544a,PD51544d_ds0011,Male,71,Romania,Bucharest,Ex-smoker,Current drinker,16754,8931,749,643
+PD42905a,PD42905c_ds0013,Female,73,Romania,Bucharest,Never,Never,20142,14669,985,663
+PD42887a,PD42887c_ds0010,Female,75,Romania,Bucharest,Never,Never,15386,12358,1578,636
+PD42890a,PD42890c,Male,77,Romania,Bucharest,Ex-smoker,Current drinker,19588,13564,2142,782
+PD42894a,PD42894c_ds0009,Male,79,Romania,Bucharest,Never,Ex-drinker,21504,10283,2092,906
+PD42898a,PD42898c,Male,81,Romania,Bucharest,Never,Current drinker,33259,6479,1424,511
+PD42899a,PD42899c,Male,83,Romania,Bucharest,Ex-smoker,Current drinker,26526,8378,1517,549
+PD46775a,PD52618b_ds0001,Male,86,Romania,Bucharest,Never,Never,18182,6356,1812,446
+PD51260a,PD51260c,Female,56,Lithuania,Vilnius,Never,Never,2993,2393,512,293
+PD50621a,PD50621c,Male,58,Lithuania,Vilnius,Current smoker,Current drinker,7371,3025,805,382
+PD50629a,PD50629c,Male,59,Lithuania,Vilnius,Never,Current drinker,5344,2585,945,328
+PD50637a,PD50637c,Male,60,Lithuania,Vilnius,Never,Current drinker,5570,2740,797,378
+PD51654a,PD51654c,Female,60,Lithuania,Vilnius,Current smoker,Current drinker,6224,3083,55,323
+PD50627a,PD50627c,Male,62,Lithuania,Vilnius,Current smoker,Current drinker,4447,2875,679,337
+PD50620a,PD50620c,Male,67,Lithuania,Vilnius,Never,Current drinker,6545,3012,1007,377
+PD50625a,PD50625c,Female,68,Lithuania,Vilnius,Ex-smoker,Current drinker,4862,3183,809,421
+PD51742a,PD51742c,Female,70,Lithuania,Vilnius,Never,Never,5866,2852,981,367
+PD50622a,PD50622c,Female,77,Lithuania,Vilnius,Never,Current drinker,6678,3482,990,434
+PD50630a,PD50630c_ds0003,Female,81,Lithuania,Vilnius,Never,Current drinker,7630,3953,1265,525
+PD55529a,PD55529b_ds0001,Male,33,Japan,Tokyo,Ex-smoker,Ex-drinker,2509,1078,197,107
+PD67543a,PD67543b,Female,36,Japan,Tokyo,Ex-smoker,Current drinker,1264,1334,129,132
+PD55519a,PD55519b_ds0001,Male,39,Japan,Tokyo,Current smoker,Current drinker,1481,1216,163,131
+PD55528a,PD55528b_ds0001,Male,45,Japan,Tokyo,Current smoker,Current drinker,3201,2056,376,197
+PD55506a,PD55506b_ds0001,Male,47,Japan,Tokyo,Ex-smoker,Never,2472,1918,228,147
+PD67540a,PD67540b,Female,49,Japan,Tokyo,Ex-smoker,Current drinker,5024,2411,473,199
+PD67560a,PD67560b,Male,49,Japan,Tokyo,Ex-smoker,Current drinker,2668,1913,210,162
+PD55508a,PD55508b_ds0001,Male,50,Japan,Tokyo,Current smoker,Current drinker,3379,1937,410,145
+PD67548a,PD67548b,Male,50,Japan,Tokyo,Current smoker,Current drinker,3565,1948,450,198
+PD55524a,PD55524b_ds0001,Female,51,Japan,Tokyo,Never,Never,1888,1963,189,203
+PD67550a,PD67550b,Male,52,Japan,Tokyo,Never,Current drinker,2957,1901,384,244
+PD67556a,PD67556b,Male,52,Japan,Tokyo,Never,Current drinker,2264,1819,225,189
+PD67561a,PD67561b,Male,52,Japan,Tokyo,Ex-smoker,Never,NA,2056,NA,203
+PD55504a,PD55504b_ds0001,Female,53,Japan,Tokyo,Ex-smoker,Current drinker,5061,1817,518,152
+PD55515a,PD55515b_ds0001,Female,55,Japan,Tokyo,Never,Current drinker,4608,2418,366,186
+PD55533a,PD55533b_ds0001,Female,56,Japan,Tokyo,Current smoker,Never,6898,1824,860,101
+PD67555a,PD67555b,Male,58,Japan,Tokyo,Ex-smoker,Current drinker,3997,2315,471,236
+PD55526a,PD55526b_ds0001,Female,59,Japan,Tokyo,Never,Never,4596,2215,460,216
+PD67537a,PD67537b,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,4586,2331,567,264
+PD67539a,PD67539b,Male,59,Japan,Tokyo,Ex-smoker,Current drinker,2392,2049,260,171
+PD67552a,PD67552b,Female,59,Japan,Tokyo,Current smoker,Ex-drinker,4305,2523,487,264
+PD55512a,PD55512b_ds0001,Male,61,Japan,Tokyo,Ex-smoker,Current drinker,3650,2096,432,251
+PD55536a,PD55536b_ds0001,Male,61,Japan,Tokyo,Never,Current drinker,6215,2846,689,229
+PD55513a,PD55513b_ds0001,Male,62,Japan,Tokyo,Ex-smoker,Never,4084,2873,504,275
+PD55516a,PD55516b_ds0001,Male,62,Japan,Tokyo,Current smoker,Current drinker,8275,4749,510,374
+PD55523a,PD55523b_ds0001,Male,62,Japan,Tokyo,Current smoker,Current drinker,6534,2701,864,207
+PD67538a,PD67538b,Female,62,Japan,Tokyo,Never,Never,1749,2302,152,211
+PD67551a,PD67551b,Male,62,Japan,Tokyo,Never,Never,3408,2218,540,234
+PD67535a,PD67535b,Male,63,Japan,Tokyo,Current smoker,Current drinker,5503,3719,611,277
+PD67541a,PD67541b,Male,63,Japan,Tokyo,Never,Current drinker,4372,3283,623,358
+PD55525a,PD55525b_ds0001,Female,64,Japan,Tokyo,Never,Never,2160,2948,207,267
+PD67536a,PD67536b,Male,65,Japan,Tokyo,Never,Never,2785,2381,247,198
+PD67554a,PD67554b,Male,65,Japan,Tokyo,Ex-smoker,Never,6306,2503,719,239
+PD67558a,PD67558b,Male,65,Japan,Tokyo,Current smoker,Never,3999,2376,429,271
+PD55510a,PD55510b_ds0001,Male,66,Japan,Tokyo,Ex-smoker,Never,5017,2707,588,271
+PD55532a,PD55532b_ds0001,Male,66,Japan,Tokyo,Ex-smoker,Missing,7725,2373,1020,233
+PD67549a,PD67549b,Male,66,Japan,Tokyo,Ex-smoker,Ex-drinker,4977,2653,594,292
+PD55520a,PD55520b_ds0001,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,4642,2887,617,310
+PD55535a,PD55535b_ds0001,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,4570,2024,594,138
+PD67545a,PD67545b,Male,67,Japan,Tokyo,Ex-smoker,Current drinker,5281,3031,581,323
+PD55514a,PD55514b_ds0001,Male,68,Japan,Tokyo,Current smoker,Current drinker,12872,6593,1019,436
+PD55534a,PD55534b_ds0001,Male,68,Japan,Tokyo,Ex-smoker,Never,5389,3394,619,318
+PD55537a,PD55537b_ds0001,Male,68,Japan,Tokyo,Current smoker,Current drinker,5725,3667,744,363
+PD55527a,PD55527b_ds0001,Male,69,Japan,Tokyo,Never,Current drinker,5204,3147,427,291
+PD55540a,PD55540b_ds0001,Male,69,Japan,Tokyo,Never,Current drinker,6600,3563,575,256
+PD67557a,PD67557b,Female,69,Japan,Tokyo,Never,Never,5043,2984,472,264
+PD67563a,PD67563b,Male,70,Japan,Tokyo,Current smoker,Current drinker,6695,4051,869,442
+PD55530a,PD55530b_ds0001,Male,71,Japan,Tokyo,Never,Current drinker,4703,2581,601,171
+PD55541a,PD55541b_ds0001,Male,72,Japan,Tokyo,Ex-smoker,Ex-drinker,5249,2357,525,259
+PD55507a,PD55507b_ds0001,Female,74,Japan,Tokyo,Missing,Missing,4857,2893,493,299
+PD55517a,PD55517b_ds0001,Male,75,Japan,Tokyo,Current smoker,Ex-drinker,6233,3416,596,284
+PD67534a,PD67534b,Male,76,Japan,Tokyo,Ex-smoker,Current drinker,6286,3381,821,308
+PD67546a,PD67546b,Female,76,Japan,Tokyo,Never,Never,5185,3425,409,298
+PD55531a,PD55531b_ds0001,Male,77,Japan,Tokyo,Ex-smoker,Current drinker,5465,3105,493,260
+PD67542a,PD67542b,Male,77,Japan,Tokyo,Never,Current drinker,7059,4412,905,439
+PD55511a,PD55511b_ds0001,Male,78,Japan,Tokyo,Never,Current drinker,6966,3075,860,384
+PD55505a,PD55505b_ds0001,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,5962,3247,614,297
+PD55521a,PD55521b_ds0001,Male,80,Japan,Tokyo,Never,Current drinker,6318,3172,561,229
+PD67547a,PD67547b,Male,80,Japan,Tokyo,Ex-smoker,Current drinker,6721,4122,645,317
+PD55509a,PD55509b_ds0001,Female,81,Japan,Tokyo,Never,Never,4024,3243,547,337
+PD67544a,PD67544b,Female,81,Japan,Tokyo,Never,Never,5284,3664,675,317
+PD67553a,PD67553b,Female,82,Japan,Tokyo,Never,Current drinker,4026,3324,560,336
+PD55538a,PD55538b_ds0001,Male,84,Japan,Tokyo,Ex-smoker,Current drinker,5195,3692,630,288
+PD55539a,PD55539b_ds0001,Male,86,Japan,Tokyo,Ex-smoker,Current drinker,7826,3805,855,337
+PD46873a,PD46873c,Male,32,Czech Republic,Olomouc,Current smoker,Never,803,1434,92,103
+PD46877a,PD52595b_ds0001,Male,35,Czech Republic,Prague,Current smoker,Current drinker,2105,1399,312,134
+PD46800a,PD46800c,Male,37,Czech Republic,Prague,Never,Never,2779,1678,376,193
+PD48864a,PD48864c,Male,40,Czech Republic,Olomouc,Never,Current drinker,3811,1863,577,217
+PD46888a,PD52596b_ds0001,Male,41,Czech Republic,Ceske Budejovice,Never,Never,3331,1847,499,214
+PD48868a,PD48868c,Female,41,Czech Republic,Olomouc,Current smoker,Never,3296,1820,310,174
+PD46839a,PD46839c,Male,41,Czech Republic,Prague,Never,Current drinker,1583,1995,251,232
+PD48871a,PD48871c,Female,42,Czech Republic,Ceske Budejovice,Never,Never,3154,1859,602,226
+PD48867a,PD48867c,Male,42,Czech Republic,Olomouc,Current smoker,Current drinker,3891,1802,743,234
+PD50084a,PD50084c,Female,44,Czech Republic,Olomouc,Current smoker,Never,3538,1649,366,135
+PD46799a,PD46799c,Female,44,Czech Republic,Prague,Never,Ex-drinker,1995,1804,410,197
+PD46836a,PD46836c,Male,44,Czech Republic,Prague,Current smoker,Current drinker,4464,2334,504,282
+PD46858a,PD46858c,Male,48,Czech Republic,Prague,Current smoker,Current drinker,3119,2792,472,411
+PD51520a,PD52598b_ds0001,Female,53,Czech Republic,Prague,Current smoker,Current drinker,NA,3304,NA,624
+PD46838a,PD46838c,Male,53,Czech Republic,Prague,Never,Ex-drinker,3101,2049,388,145
+PD46769a,PD52601b_ds0001,Male,54,Czech Republic,Ceske Budejovice,Never,Current drinker,4187,2419,643,224
+PD46834a,PD46834c,Male,54,Czech Republic,Prague,Ex-smoker,Current drinker,4743,2854,631,349
+PD46891a,PD46891c_ds0012,Male,55,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,4575,3753,751,456
+PD51816a,PD51816c,Male,56,Czech Republic,Ceske Budejovice,Ex-smoker,Current drinker,6185,3328,1390,561
+PD48866a,PD48866c,Male,57,Czech Republic,Olomouc,Never,Current drinker,7116,3017,757,408
+PD46841a,PD46841c,Male,57,Czech Republic,Prague,Never,Never,8406,3708,1287,506
+PD51526a,PD51526c_ds0006,Male,58,Czech Republic,Brno,Ex-smoker,Current drinker,3377,4860,375,1017
+PD46903a,PD46903c,Female,59,Czech Republic,Brno,Current smoker,Never,6599,3104,803,341
+PD51516a,PD52597b_ds0001,Male,59,Czech Republic,Prague,Current smoker,Current drinker,4801,3184,633,511
+PD46960a,PD46960c,Male,59,Czech Republic,Prague,Never,Current drinker,7569,2865,1243,470
+PD46875a,PD46875c,Female,60,Czech Republic,Ceske Budejovice,Never,Never,5021,2686,670,282
+PD48865a,PD48865c,Male,60,Czech Republic,Olomouc,Never,Current drinker,3434,2560,405,360
+PD46962a,PD52603b_ds0001,Male,61,Czech Republic,Ceske Budejovice,Ex-smoker,Current drinker,6650,3647,1312,603
+PD46872a,PD52602b_ds0001,Female,61,Czech Republic,Olomouc,Never,Never,6340,2707,917,404
+PD46869a,PD46869c,Male,62,Czech Republic,Olomouc,Ex-smoker,Current drinker,6710,3167,847,471
+PD51510a,PD51510c,Male,62,Czech Republic,Prague,Ex-smoker,Never,5646,3071,1094,418
+PD46859a,PD46859c,Female,64,Czech Republic,Brno,Never,Never,4814,2579,839,307
+PD51219a,PD51219c,Male,65,Czech Republic,Ceske Budejovice,Ex-smoker,Current drinker,8801,4048,1175,722
+PD46866a,PD46866c_ds0007,Female,65,Czech Republic,Olomouc,Current smoker,Never,6710,3720,817,384
+PD51534a,PD51534c,Female,66,Czech Republic,Brno,Never,Never,4552,3352,647,476
+PD46887a,PD52604b_ds0001,Male,67,Czech Republic,Ceske Budejovice,Current smoker,Current drinker,7609,4022,1264,469
+PD46961a,PD46961c,Male,67,Czech Republic,Olomouc,Ex-smoker,Current drinker,4762,3536,574,314
+PD48855a,PD48855c,Male,67,Czech Republic,Prague,Never,Current drinker,12833,4051,618,570
+PD51511a,PD51511c,Male,67,Czech Republic,Prague,Ex-smoker,Ex-drinker,5625,4409,683,778
+PD46948a,PD46948c,Female,68,Czech Republic,Brno,Never,Never,4753,2814,640,342
+PD46743a,PD46743c,Female,68,Czech Republic,Prague,Current smoker,Never,8257,4636,2604,670
+PD51514a,PD51514c,Male,68,Czech Republic,Prague,Never,Never,5714,3322,1064,542
+PD51717a,PD51717c,Female,68,Czech Republic,Prague,Never,Never,4378,3004,655,373
+PD48873a,PD48873c,Male,69,Czech Republic,Ceske Budejovice,Never,Current drinker,3135,3542,308,488
+PD46892a,PD52605b_ds0001,Female,70,Czech Republic,Ceske Budejovice,Never,Never,7189,3806,1515,558
+PD48875a,PD48875c,Female,70,Czech Republic,Ceske Budejovice,Never,Never,9691,3777,1827,541
+PD51525a,PD51525c,Female,71,Czech Republic,Brno,Ex-smoker,Never,8814,4142,1274,598
+PD46770a,PD46770c,Male,72,Czech Republic,Ceske Budejovice,Never,Never,5002,3496,811,383
+PD46963a,PD46963c,Male,72,Czech Republic,Ceske Budejovice,Ex-smoker,Ex-drinker,9981,4409,1891,699
+PD50085a,PD50085c,Male,72,Czech Republic,Ceske Budejovice,Never,Current drinker,5317,2775,937,363
+PD46871a,PD52606b_ds0001,Male,72,Czech Republic,Olomouc,Ex-smoker,Current drinker,5315,4073,921,513
+PD46964a,PD53852b_ds0001,Male,73,Czech Republic,Ceske Budejovice,Ex-smoker,Current drinker,4977,4616,664,691
+PD48859a,PD48859c,Female,73,Czech Republic,Prague,Never,Never,5031,3202,843,397
+PD46748a,PD46748c,Female,74,Czech Republic,Ceske Budejovice,Never,Never,7537,3637,1413,383
+PD51519a,PD52607b_ds0001,Male,74,Czech Republic,Prague,Ex-smoker,Current drinker,6114,4056,1232,677
+PD46860a,PD46860c_ds0005,Male,75,Czech Republic,Brno,Ex-smoker,Never,3939,5822,340,1096
+PD46710a,PD46710c_ds0008,Male,75,Czech Republic,Ceske Budejovice,Never,Never,5796,4137,1067,627
+PD51518a,PD51518c,Female,76,Czech Republic,Prague,Never,Never,5670,3864,1182,538
+PD51529a,PD52608b_ds0001,Female,77,Czech Republic,Brno,Never,Never,7797,3686,1517,600
+PD51522a,PD51522c,Female,77,Czech Republic,Prague,Never,Never,6705,3556,736,597
+PD46889a,PD52609b_ds0001,Female,78,Czech Republic,Ceske Budejovice,Never,Never,5717,3349,750,418
+PD46885a,PD46885c_ds0003,Female,78,Czech Republic,Ceske Budejovice,Never,Never,7903,6593,1300,985
+PD51532a,PD51532c,Male,79,Czech Republic,Brno,Current smoker,Current drinker,8965,6069,1810,1155
+PD51213a,PD51213c_ds0006,Male,80,Czech Republic,Olomouc,Ex-smoker,Current drinker,9008,5086,1310,716
+PD48851a,PD48851c,Female,80,Czech Republic,Prague,Never,Never,7433,4186,846,520
+PD48872a,PD48872c,Female,82,Czech Republic,Ceske Budejovice,Never,Never,3579,3989,349,638
+PD48869a,PD48869c_ds0005,Male,85,Czech Republic,Olomouc,Never,Never,10099,4858,1457,511
+PD51705a,PD51705c_ds0007,Male,52,Canada,Toronto,Never,Current drinker,5776,2145,690,174
+PD51737a,PD51737c_ds0006,Female,62,Canada,Toronto,Current smoker,Never,8420,4300,1215,636
+PD51667a,PD51667c_ds0006,Female,68,Canada,Toronto,Never,Current drinker,3595,2366,467,218
+PD51682a,PD51682c_ds0006,Male,68,Canada,Toronto,Never,Current drinker,8038,3124,1381,468
+PD51695a,PD51695c_ds0005,Male,68,Canada,Toronto,Current smoker,Current drinker,6080,3301,642,205
+PD51697a,PD51697c_ds0004,Male,68,Canada,Toronto,Never,Never,5504,2834,926,307
+PD51702a,PD51702c_ds0007,Female,72,Canada,Toronto,Never,Current drinker,6776,2897,1258,283
+PD51290a,PD51290c,Male,23,Brazil,Barretos,Never,Never,2213,1130,366,135
+PD50137a,PD50137c,Male,29,Brazil,Sao Paulo,Never,Current drinker,1817,1460,319,164
+PD50143a,PD50143c,Female,36,Brazil,Sao Paulo,Never,Never,1218,1589,176,160
+PD50187a,PD50187c,Female,42,Brazil,Porto Alegre,Never,Never,4564,2450,585,323
+PD50168a,PD50168c_ds0008,Male,43,Brazil,Porto Alegre,Current smoker,Current drinker,8125,2745,849,460
+PD51285a,PD51285c_ds0013,Female,45,Brazil,Sao Paulo,Current smoker,Current drinker,4676,2689,650,390
+PD51658a,PD51658c,Female,47,Brazil,Sao Paulo,Current smoker,Current drinker,1553,2350,311,346
+PD51646a,PD51646c,Male,50,Brazil,Sao Paulo,Never,Current drinker,3466,2188,433,220
+PD50160a,PD50160c,Female,51,Brazil,Barretos,Ex-smoker,Current drinker,2896,2057,386,219
+PD51643a,PD51643c,Male,51,Brazil,Barretos,Current smoker,Current drinker,5339,2819,853,345
+PD50171a,PD50171c_ds0013,Male,51,Brazil,Porto Alegre,Never,Never,4380,2091,788,249
+PD51262a,PD51262c,Male,51,Brazil,Sao Paulo,Current smoker,Current drinker,4273,3028,772,353
+PD51266a,PD51266c,Male,52,Brazil,Sao Paulo,Never,Never,3041,2240,329,253
+PD51661a,PD51661c,Female,53,Brazil,Barretos,Ex-smoker,Current drinker,3319,2605,407,308
+PD51651a,PD51651c,Female,53,Brazil,Sao Paulo,Never,Ex-drinker,4118,2435,576,275
+PD51720a,PD51720c,Female,53,Brazil,Sao Paulo,Never,Never,2554,1746,401,213
+PD50165a,PD50165c_ds0009,Female,54,Brazil,Porto Alegre,Never,Never,5404,2520,631,317
+PD50610a,PD50610c,Male,56,Brazil,Barretos,Current smoker,Current drinker,2759,3226,194,419
+PD51273a,PD51273c,Male,56,Brazil,Porto Alegre,Ex-smoker,Current drinker,6312,2355,920,272
+PD51652a,PD51652c,Female,56,Brazil,Sao Paulo,Never,Ex-drinker,3950,2184,282,214
+PD51715a,PD51715c,Female,56,Brazil,Sao Paulo,Never,Never,5211,2556,29,382
+PD50161a,PD50161c,Female,57,Brazil,Barretos,Never,Ex-drinker,4731,2108,430,186
+PD51644a,PD51644c,Male,59,Brazil,Barretos,Ex-smoker,Ex-drinker,5578,2925,857,335
+PD50166a,PD50166c,Male,59,Brazil,Porto Alegre,Current smoker,Current drinker,4378,2763,648,251
+PD51293a,PD51293c,Female,59,Brazil,Sao Paulo,Current smoker,Current drinker,2868,2235,280,227
+PD51389a,PD51389c,Male,60,Brazil,Porto Alegre,Ex-smoker,Current drinker,8937,4086,1429,612
+PD51276a,PD51276c,Female,60,Brazil,Sao Paulo,Never,Current drinker,1666,2658,224,288
+PD50164a,PD50164c,Female,66,Brazil,Porto Alegre,Ex-smoker,Current drinker,4782,3189,909,364
+PD51385a,PD51385c_ds0014,Female,67,Brazil,Barretos,Never,Never,9358,12197,709,455
+PD51639a,PD51639c,Female,68,Brazil,Barretos,Never,Never,3292,2726,494,278
+PD51642a,PD51642c_ds0006,Female,68,Brazil,Barretos,Ex-smoker,Current drinker,4479,2847,590,325
+PD50147a,PD50147c,Female,68,Brazil,Sao Paulo,Never,Current drinker,11527,3199,499,261
+PD51254a,PD51254c,Female,70,Brazil,Barretos,Current smoker,Ex-drinker,5149,3520,788,381
+PD51256a,PD51256c,Female,70,Brazil,Barretos,Never,Never,4198,2531,390,204
+PD50153a,PD50153c_ds0006,Male,70,Brazil,Sao Paulo,Ex-smoker,Ex-drinker,5776,2999,650,291
+PD51267a,PD51267c,Male,73,Brazil,Porto Alegre,Never,Current drinker,6582,3321,1127,382
+PD51274a,PD51274c,Male,75,Brazil,Barretos,Ex-smoker,Never,3240,3000,471,359
+PD51264a,PD51264c,Female,77,Brazil,Porto Alegre,Never,Current drinker,4899,3630,675,473
+PD51640a,PD51640c,Female,81,Brazil,Barretos,Never,Never,6549,3250,1375,343
+PD50167a,PD50167c,Female,83,Brazil,Porto Alegre,Ex-smoker,Current drinker,6972,4205,988,443

@@ -1,0 +1,467 @@
+    # -----------Normal SBS----------------
+    metadata_path <- "../data/bulk_normal_kidney_metadata.csv"
+    weights_path  <- "../data/SBS96_kidney_signature_weights_table.csv"
+
+    metadata <- read.csv(metadata_path, header = TRUE, stringsAsFactors = FALSE)
+    metadata$Country[metadata$Country=='United Kingdom']='UK'
+    metadata$Country[metadata$Country=='Czech Republic']='Czechia'
+
+    df_normal_SBS <- metadata %>%
+      transmute(
+        normal = Normal_Kidney,
+        cancer = Tumor,
+        type = "Normal",
+        Country = Country,
+        Age = Age,
+        Sex = Sex,
+        Alcohol = Alcohol,
+        Tobacco = Tobacco,
+        Burden = Normal_SBS_burden
+      )
+    df_normal_SBS$Country <- factor(df_normal_SBS$Country)
+    df_normal_SBS <- df_normal_SBS[df_normal_SBS$normal!='PD47592c_ds0003',] #remove one repetitive sample for PD47592
+    weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+    # keep only samples present in metadata
+    weights_raw <- weights_raw[weights_raw$Sample %in% metadata$Normal_Kidney, , drop = FALSE]
+    rownames(weights_raw) <- weights_raw$Sample
+
+    # align and subset weights to the same order as df_normal_SBS
+    weights <- weights_raw[ df_normal_SBS$normal, , drop = FALSE ]
+
+    # ensure numeric signature columns (exclude "Sample" if present)
+    sig_cols <- setdiff(colnames(weights), "Sample")
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+    # zero small contributions, but preserve SBS2/SBS13 when their sum > 0.05 (based on original raw values)
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+    rows_restore <- rownames(weights)[ (weights_raw[rownames(weights), "SBS2"] + weights_raw[rownames(weights), "SBS13"]) > 0.05 ]
+    if (length(rows_restore) > 0) {
+      weights[rows_restore, "SBS2"]  <- weights_raw[rows_restore, "SBS2"]
+      weights[rows_restore, "SBS13"] <- weights_raw[rows_restore, "SBS13"]
+    }
+
+    # compute Unassigned and clamp negatives to zero
+    weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+    weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+    # add signature burdens to df_normal_SBS
+    df_normal_SBS <- df_normal_SBS %>%
+      mutate(
+        SBS1 = weights$SBS1 * Burden,
+        SBS5 = weights$SBS5 * Burden,
+        SBS12 = weights$SBS12 * Burden,
+        SBS2 = weights$SBS2 * Burden,
+        SBS13 = weights$SBS13 * Burden,
+        APOBEC = (weights$SBS2+weights$SBS13) * Burden,
+        SBS18 = weights$SBS18 * Burden,
+        SBS22a = weights$SBS22a * Burden,
+        SBS22b = weights$SBS22b * Burden,
+        SBS22c = weights$SBS22c * Burden,
+        SBS40a = weights$SBS40a * Burden,
+        SBS40b = weights$SBS40b * Burden,
+        SBS40c = weights$SBS40c * Burden,
+        SBSB = weights$SBSB * Burden,
+        SBSC = weights$SBSC * Burden,
+        SBSD = weights$SBSD * Burden,
+        MSI = (weights$SBS21+weights$SBS44) * Burden,
+        SBS21 = weights$SBS21 * Burden,
+        SBS44 = weights$SBS44 * Burden,
+        Unassigned = weights$Unassigned * Burden
+      )
+
+    signature_names <- c(
+      "SBS40a","SBS40b","SBS40c","SBS5","SBS22a",
+      "SBS22b","SBS22c","SBS12","SBS18","SBS1",
+      # "APOBEC","SBSD","MSI",
+      "SBSB","SBSC","Others", "Unassigned"
+    )
+
+    cols <- c(
+      "#8DD3C7", "#CFECBB", "#F4F3B9", "#BD98A2",  "#1f78b4","#8AB1C9",
+       "#759696", "#F5847A", "#D3B387", "#17BEBB", 
+         # "#BFD767", "#CECBD0", "purple",
+      "#cab2d6","#FCCDE5", "#E5E4E6","#8A8A8A"
+    )
+    names(cols) <- signature_names
+
+    sig_levels <- signature_names
+
+    # Normal
+    bycountry_summary_normal <- df_normal_SBS %>% 
+      group_by(Country) %>% 
+      summarize(SBS1 = mean(SBS1),
+                SBS5 = mean(SBS5),
+                SBS12 = mean(SBS12),
+                # APOBEC = mean(APOBEC),
+                # SBS18 = mean(SBS18),
+                SBS22a = mean(SBS22a),
+                SBS22b = mean(SBS22b),
+                SBS22c = mean(SBS22c),
+                SBS40a = mean(SBS40a),
+                SBS40b = mean(SBS40b),
+                SBS40c = mean(SBS40c),
+                SBSB = mean(SBSB),
+                SBSC = mean(SBSC),
+                # SBSD = mean(SBSD),
+                # MSI = mean(MSI),
+                Others = mean(APOBEC+SBS18+SBSD+MSI),
+                Unassigned = mean(Unassigned)) 
+
+    test <- gather(bycountry_summary_normal, E1, E2, -Country)
+    test$E1 <- factor(test$E1, levels = sig_levels)
+
+    # write.csv(df_normal_SBS, "../../data_S1/Fig2a_normal_SBS_samples.csv", row.names = FALSE)
+    write.csv(bycountry_summary_normal, "../../data_S1/Fig2a_normal_SBS_by_country.csv", row.names = FALSE)
+
+    pdf("../../figure/signatures/normal_geographic_sigs.pdf",width = 5, height = 5)
+    p<-ggplot(test, aes(x = Country, y = E2, fill = E1)) +
+      geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+
+      labs(x = "Country", y = "SBS average burden", fill = "Signatures", title = 'Normal')+#ylim(c(0,17500))+
+      theme(axis.ticks.x = element_blank(),
+            panel.grid=element_blank(),
+            panel.border=element_blank(),
+            axis.title.x = element_text(size = 16),
+            axis.title.y = element_text(size = 16),
+            axis.text.x  = element_text(size = 12, angle = 60, hjust = 1, vjust = 1.2),
+            axis.text.y  = element_text(size = 12),
+            legend.title = element_text(size = 15),
+            legend.text  = element_text(size = 12),
+            plot.title   = element_text(size = 18))+
+      coord_cartesian(ylim = c(0, 14000))
+    p
+    dev.off()
+
+    ## quartz_off_screen 
+    ##                 2
+
+    p
+
+![](Fig2ab_signature_overview_files/figure-markdown_strict/Normal%20SBS-1.png)
+
+    # -----------Cancer SBS----------------
+    metadata_path <- "../data/bulk_normal_kidney_metadata.csv"
+    weights_path  <- "../data/SBS96_kidney_signature_weights_table.csv"
+
+    metadata <- read.csv(metadata_path, header = TRUE, stringsAsFactors = FALSE)
+    metadata <- dplyr::filter(metadata, !is.na(Tumor_SBS_burden))
+    metadata$Country[metadata$Country=='United Kingdom']='UK'
+    metadata$Country[metadata$Country=='Czech Republic']='Czechia'
+
+    df_cancer_SBS <- metadata %>%
+      transmute(
+        normal = Normal_Kidney,
+        cancer = Tumor,
+        type = "Cancer",
+        Country = Country,
+        Age = Age,
+        Sex = Sex,
+        Alcohol = Alcohol,
+        Tobacco = Tobacco,
+        Burden = Tumor_SBS_burden
+      )
+    df_cancer_SBS$Country <- factor(df_cancer_SBS$Country)
+    df_cancer_SBS <- df_cancer_SBS[df_cancer_SBS$cancer!='PD47592a',]
+    weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+    # keep only samples present in metadata
+    weights_raw <- weights_raw[weights_raw$Sample %in% df_cancer_SBS$cancer, , drop = FALSE]
+    rownames(weights_raw) <- weights_raw$Sample
+
+    # align and subset weights to the same order as df_cancer_SBS
+    weights <- weights_raw[df_cancer_SBS$cancer, , drop = FALSE]
+
+    # ensure numeric signature columns (exclude "Sample" if present)
+    sig_cols <- setdiff(colnames(weights), "Sample")
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+    # zero small contributions, but preserve SBS2/SBS13 when their sum > 0.05
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+    rows_restore <- rownames(weights)[(weights_raw[rownames(weights), "SBS2"] + weights_raw[rownames(weights), "SBS13"]) > 0.05]
+    if (length(rows_restore) > 0) {
+      weights[rows_restore, "SBS2"]  <- weights_raw[rows_restore, "SBS2"]
+      weights[rows_restore, "SBS13"] <- weights_raw[rows_restore, "SBS13"]
+    }
+
+    # compute Unassigned and clamp negatives to zero
+    weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+    weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+    # add signature burdens to df_cancer_SBS
+    df_cancer_SBS <- df_cancer_SBS %>%
+      mutate(
+        SBS1 = weights$SBS1 * Burden,
+        SBS5 = weights$SBS5 * Burden,
+        SBS12 = weights$SBS12 * Burden,
+        APOBEC = (weights$SBS2+weights$SBS13) * Burden,
+        SBS18 = weights$SBS18 * Burden,
+        SBS22a = weights$SBS22a * Burden,
+        SBS22b = weights$SBS22b * Burden,
+        SBS22c = weights$SBS22c * Burden,
+        SBS40a = weights$SBS40a * Burden,
+        SBS40b = weights$SBS40b * Burden,
+        SBS40c = weights$SBS40c * Burden,
+        SBSB = weights$SBSB * Burden,
+        SBSC = weights$SBSC * Burden,
+        SBSD = weights$SBSD * Burden,
+        MSI = (weights$SBS21+weights$SBS44) * Burden,
+        Unassigned = weights$Unassigned * Burden
+      )
+
+
+    bycountry_summary_cancer <- df_cancer_SBS %>% 
+      group_by(Country) %>% 
+      summarize(SBS1 = mean(SBS1),
+                SBS5 = mean(SBS5),
+                SBS12 = mean(SBS12),
+                # APOBEC = mean(APOBEC),
+                # SBS18 = mean(SBS18),
+                SBS22a = mean(SBS22a),
+                SBS22b = mean(SBS22b),
+                SBS22c = mean(SBS22c),
+                SBS40a = mean(SBS40a),
+                SBS40b = mean(SBS40b),
+                SBS40c = mean(SBS40c),
+                SBSB = mean(SBSB),
+                SBSC = mean(SBSC),
+                # SBSD = mean(SBSD),
+                # MSI = mean(MSI),
+                Others = mean(APOBEC+SBS18+SBSD+MSI),
+                Unassigned = mean(Unassigned)) 
+
+    test <- gather(bycountry_summary_cancer, E1, E2, -Country)
+    test$E1 <- factor(test$E1, levels = sig_levels)
+
+    # write.csv(df_cancer_SBS, "../../data_S1/Fig2a_cancer_SBS_samples.csv", row.names = FALSE)
+    write.csv(bycountry_summary_cancer, "../../data_S1/Fig2a_cancer_SBS_by_country.csv", row.names = FALSE)
+
+    pdf("../../figure/signatures/cancer_geographic_sigs.pdf",width = 5, height = 5)
+    p <- ggplot(test, aes(x = Country, y = E2, fill = E1)) +
+      geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+
+      labs(x = "Country", y = "SBS average burden", fill = "Signatures", title = 'Cancer')+#ylim(c(0,17500))+
+      theme(axis.ticks.x = element_blank(),
+          panel.grid=element_blank(),
+          panel.border=element_blank(),
+          axis.title.x = element_text(size = 16),
+          axis.title.y = element_text(size = 16),
+          axis.text.x  = element_text(size = 12, angle = 60, hjust = 1, vjust = 1.2),
+          axis.text.y  = element_text(size = 12),
+          legend.title = element_text(size = 15),
+          legend.text  = element_text(size = 12),
+          plot.title   = element_text(size = 18))+
+      coord_cartesian(ylim = c(0, 14000))
+    p
+    dev.off()
+
+    ## quartz_off_screen 
+    ##                 2
+
+    p
+
+![](Fig2ab_signature_overview_files/figure-markdown_strict/Cancer%20SBS-1.png)
+
+    # -----------Normal ID-----------
+    metadata_path <- "../data/bulk_normal_kidney_metadata.csv"
+    weights_path <- "../data/ID83_kidney_signature_ID_weights_table.csv"
+
+    metadata <- read.csv(metadata_path, header = TRUE, stringsAsFactors = FALSE)
+    metadata$Country[metadata$Country=='United Kingdom']='UK'
+    metadata$Country[metadata$Country=='Czech Republic']='Czechia'
+
+    df_normal_ID <- metadata %>%
+      transmute(
+        normal = Normal_Kidney,
+        cancer = Tumor,
+        type = "Normal",
+        Country = Country,
+        Age = Age,
+        Sex = Sex,
+        Alcohol = Alcohol,
+        Tobacco = Tobacco,
+        Burden = Normal_ID_burden
+      )
+    df_normal_ID$Country <- factor(df_normal_ID$Country)
+    df_normal_ID <- df_normal_ID[df_normal_ID$normal!='PD47592c_ds0003',] #remove one repetitive sample for PD47592
+
+    weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+    weights_raw <- weights_raw[weights_raw$Sample %in% metadata$Normal_Kidney, , drop = FALSE]
+    rownames(weights_raw) <- weights_raw$Sample
+
+    weights <- weights_raw[df_normal_ID$normal, , drop = FALSE]
+
+    sig_cols <- setdiff(colnames(weights), "Sample")
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+
+    weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+    weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+    df_normal_ID <- df_normal_ID %>%
+      mutate(
+        ID1 = weights$ID1 * Burden,
+        ID2 = weights$ID2 * Burden,
+        ID3 = weights$ID3 * Burden,
+        ID5 = weights$ID5 * Burden,
+        ID8 = weights$ID8 * Burden,
+        ID9 = weights$ID9 * Burden,
+        ID11 = weights$ID11 * Burden,
+        ID12 = weights$ID12 * Burden,
+        ID21 = weights$ID21 * Burden,
+        ID23 = weights$ID23 * Burden,
+        Unassigned = weights$Unassigned * Burden
+      )
+
+    cols <- c("#8DD3C7", "#CFECBB","#F4F3B9", "#BD98A2",
+              "#F5847A", "#8AB1C9", "#EABE63", "#BFD767", 
+              "#FCCDE5", "#cab2d6", "#E5E4E6", "#8A8A8A")
+    names(cols) <- c('ID1', 'ID2', 'ID3','ID5',
+                    'ID8', 'ID9', 'ID11', 'ID12', 
+                    'ID23', 'ID21', 'Others', 'Unassigned')
+
+    sig_levels <- names(cols)
+
+    bycountry_summary_normal <- df_normal_ID %>% 
+      group_by(Country) %>% 
+      summarize(ID1 = mean(ID1),
+                ID2 = mean(ID2),
+                ID3 = mean(ID3),
+                ID5 = mean(ID5),
+                ID23 = mean(ID23),
+                ID8 = mean(ID8),
+                ID9 = mean(ID9),
+                ID11 = mean(ID11),
+                ID12 = mean(ID12),
+                ID21 = mean(ID21),
+                Unassigned = mean(Unassigned))
+
+    test <- gather(bycountry_summary_normal, E1, E2, -Country)
+    test$E1 <- factor(test$E1, levels = sig_levels)
+
+    # write.csv(df_normal_ID, "../../data_S1/Fig2b_normal_ID_samples.csv", row.names = FALSE)
+    write.csv(bycountry_summary_normal, "../../data_S1/Fig2b_normal_ID_by_country.csv", row.names = FALSE)
+
+    pdf("../../figure/signatures/normal_ID_geographic_sigs.pdf",width = 5, height = 5)
+    p <- ggplot(test, aes(x = Country, y = E2, fill = E1)) +
+      geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+
+      labs(x = "Country", y = "Indel average burden", fill = "Signatures", title = 'Normal')+#ylim(c(0,17500))+
+      theme(axis.ticks.x = element_blank(),
+        panel.grid=element_blank(),
+        panel.border=element_blank(),
+        axis.title.x = element_text(size = 16),
+        axis.title.y = element_text(size = 16),
+        axis.text.x  = element_text(size = 12, angle = 60, hjust = 1, vjust = 1.2),
+        axis.text.y  = element_text(size = 12),
+        legend.title = element_text(size = 15),
+        legend.text  = element_text(size = 12),
+        plot.title   = element_text(size = 18))+
+      coord_cartesian(ylim = c(0, 1200))
+    p
+    dev.off()
+
+    ## quartz_off_screen 
+    ##                 2
+
+    p
+
+![](Fig2ab_signature_overview_files/figure-markdown_strict/Normal%20ID-1.png)
+
+    # -----------Cancer ID-----------
+    metadata_path <- "../data/bulk_normal_kidney_metadata.csv"
+    weights_path <- "../data/ID83_kidney_signature_ID_weights_table.csv"
+
+    metadata <- read.csv(metadata_path, header = TRUE, stringsAsFactors = FALSE)
+    metadata <- dplyr::filter(metadata, !is.na(Tumor_SBS_burden))
+    metadata$Country[metadata$Country=='United Kingdom']='UK'
+    metadata$Country[metadata$Country=='Czech Republic']='Czechia'
+
+    df_cancer_ID <- metadata %>%
+      transmute(
+        normal = Normal_Kidney,
+        cancer = Tumor,
+        type = "Cancer",
+        Country = Country,
+        Age = Age,
+        Sex = Sex,
+        Alcohol = Alcohol,
+        Tobacco = Tobacco,
+        Burden = Tumor_ID_burden
+      )
+    df_cancer_ID$Country <- factor(df_cancer_ID$Country)
+    df_cancer_ID <- df_cancer_ID[!df_cancer_ID$cancer %in% c('PD47592a','PD50441a'),] #Hypermutator
+
+    weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+    weights_raw <- weights_raw[weights_raw$Sample %in% df_cancer_ID$cancer, , drop = FALSE]
+    rownames(weights_raw) <- weights_raw$Sample
+
+    weights <- weights_raw[df_cancer_ID$cancer, , drop = FALSE]
+
+    sig_cols <- setdiff(colnames(weights), "Sample")
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+
+    weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+    weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+    weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+    df_cancer_ID <- df_cancer_ID %>%
+      mutate(
+        ID1 = weights$ID1 * Burden,
+        ID2 = weights$ID2 * Burden,
+        ID3 = weights$ID3 * Burden,
+        ID5 = weights$ID5 * Burden,
+        ID8 = weights$ID8 * Burden,
+        ID9 = weights$ID9 * Burden,
+        ID11 = weights$ID11 * Burden,
+        ID12 = weights$ID12 * Burden,
+        ID23 = weights$ID23 * Burden,
+        ID21 = weights$ID21 * Burden,
+        Unassigned = weights$Unassigned * Burden
+      )
+
+    bycountry_summary_cancer <- df_cancer_ID %>% 
+      group_by(Country) %>% 
+      summarize(ID1 = mean(ID1),
+                ID2 = mean(ID2),
+                ID3 = mean(ID3),
+                ID5 = mean(ID5),
+                ID23 = mean(ID23),
+                ID8 = mean(ID8),
+                ID9 = mean(ID9),
+                ID11 = mean(ID11),
+                ID12 = mean(ID12),
+                ID21 = mean(ID21),
+                Unassigned = mean(Unassigned))
+
+    test <- gather(bycountry_summary_cancer, E1, E2, -Country)
+    test$E1 <- factor(test$E1, levels = sig_levels)
+
+    # write.csv(df_cancer_ID, "../../data_S1/Fig2b_cancer_ID_samples.csv", row.names = FALSE)
+    write.csv(bycountry_summary_cancer, "../../data_S1/Fig2b_cancer_ID_by_country.csv", row.names = FALSE)
+
+    pdf("../../figure/signatures/cancer_ID_geographic_sigs.pdf",width = 4.5, height = 4.5)
+    p <- ggplot(test, aes(x = Country, y = E2, fill = E1)) +
+      geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+
+      labs(x = "Country", y = "Indel average burden", fill = "Signatures", title = 'Cancer ')+#ylim(c(0,17500))+
+      theme(axis.ticks.x = element_blank(),
+          panel.grid=element_blank(),
+          panel.border=element_blank(),
+          axis.title.x = element_text(size = 16),
+          axis.title.y = element_text(size = 16),
+          axis.text.x  = element_text(size = 12, angle = 60, hjust = 1, vjust = 1.2),
+          axis.text.y  = element_text(size = 12),
+          legend.title = element_text(size = 15),
+          legend.text  = element_text(size = 12),
+          plot.title   = element_text(size = 18))+
+      coord_cartesian(ylim = c(0, 1200))
+    p
+    dev.off()
+
+    ## quartz_off_screen 
+    ##                 2
+
+    p
+
+![](Fig2ab_signature_overview_files/figure-markdown_strict/Cancer%20ID-1.png)

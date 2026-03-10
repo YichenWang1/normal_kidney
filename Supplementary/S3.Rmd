@@ -1,0 +1,57 @@
+---
+author: "Yichen Wang"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(RColorBrewer)
+library(ggtree)
+library(lsa)
+library(lattice)
+library(sigfit)
+# data("cosmic_signatures_v3.2", package="sigfit")
+```
+
+
+```{r load HDP results}
+# Load reference signatures
+ref=read.csv("../data/COSMIC_v3.4_SBS_GRCh37_with_liver_platinum_sig.txt", header=T, stringsAsFactors = F, sep='\t')
+features<-ref$Type
+rownames(ref)<-features
+ref=ref[,-1]
+
+mut.cols = rep(c("dodgerblue","black","red","grey70","olivedrab3","plum2"),each=16)
+
+# Load Sigprofiler signatures
+sigprofiler_sigs=read.table("../data/S3_Sigprofiler_Signatures.txt",check.names = F, header=T)
+rownames(sigprofiler_sigs)=sigprofiler_sigs[,1]
+sigprofiler_sigs=sigprofiler_sigs[,-1]
+```
+
+
+```{r Assess cosine similarities for RCC reference signatures, echo=FALSE}
+ref=ref[,c("SBS40a","SBS40b","SBS40c","SBS1","SBS2","SBS4","SBS5","SBS12",
+"SBS13","SBS18","SBS21","SBS22a", "SBS22b","SBS44","SBS_platinum")]
+
+cosine_matrix=data.frame(matrix(nrow=ncol(sigprofiler_sigs), ncol=ncol(ref)))
+rownames(cosine_matrix)=colnames(sigprofiler_sigs)
+colnames(cosine_matrix)=colnames(ref)
+
+for (n in 1:nrow(cosine_matrix)) {
+  for (m in 1:ncol(cosine_matrix)) {
+    cosine_matrix[n,m] <- cosine(x=sigprofiler_sigs[,rownames(cosine_matrix)[n]],
+                                 y=ref[,colnames(cosine_matrix)[m]])
+  }
+}
+
+
+write.table(cosine_matrix, "../../figure/Extended Data Fig/EF3/Cosine_similarities.txt",sep="\t",quote=F)
+write.csv(cosine_matrix, "../../data_S1/S3_SigProfiler_cosine_similarity.csv", row.names = TRUE)
+
+# Plot output
+color.palette = colorRampPalette(c("white", "orange", "purple"))
+# pdf("../../figure/Extended Data Fig/EF3/cosine_similarity.pdf",width=9, height=4)
+levelplot(t(cosine_matrix[dim(cosine_matrix)[1]:1,]),col.regions=color.palette, aspect="fill", scales=list(x=list(rot=90)), xlab="Reference signatures", ylab="Sigprofiler signatures")
+# dev.off()
+```

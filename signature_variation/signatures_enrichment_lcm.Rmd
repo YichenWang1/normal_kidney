@@ -1,0 +1,214 @@
+---
+author: "Yichen Wang"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(nlme)
+library(purrr)
+library(emmeans)
+```
+
+```{r Load SBS data}
+metadata_path <- "../data/LCM_normal_kidney_metadata.csv"
+weights_path  <- "../data/SBS96_kidney_signature_weights_table.csv"
+LCM_metadata <- read.csv(metadata_path, header = TRUE, stringsAsFactors = FALSE)
+
+df = data.frame(Patient = LCM_metadata$Patient, Sample = LCM_metadata$Sample, Structure = LCM_metadata$Structure, Country = LCM_metadata$Country, Sex = LCM_metadata$Sex, Age = LCM_metadata$Age, Tobacco = LCM_metadata$Tobacco, Burden_SBS= LCM_metadata$Normal_SBS_burden, Burden_ID= LCM_metadata$Normal_ID_burden)
+df2 = na.omit(unique(data.frame(Patient = LCM_metadata$Patient, Sample = LCM_metadata$Tumor, Structure = "Tumor", Country = LCM_metadata$Country, Sex = LCM_metadata$Sex, Age = LCM_metadata$Age, Tobacco = LCM_metadata$Tobacco, Burden_SBS= LCM_metadata$Tumor_SBS_burden, Burden_ID= LCM_metadata$Tumor_ID_burden)))
+df2 <- df2[!df2$Sample%in% c('PD47592a'),]
+df = rbind(df,df2)
+df$Structure = as.factor(df$Structure)
+
+weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+weights_raw$Sample <- sub(" .*", "", weights_raw$Sample)
+# keep only samples present in metadata
+weights_raw <- weights_raw[weights_raw$Sample %in% df$Sample, , drop = FALSE]
+rownames(weights_raw) <- weights_raw$Sample
+
+# align and subset weights to the same order as df_normal_SBS
+weights <- weights_raw[df$Sample, , drop = FALSE ]
+
+# ensure numeric signature columns (exclude "Sample" if present)
+sig_cols <- setdiff(colnames(weights), "Sample")
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+# zero small contributions, but preserve SBS2/SBS13 when their sum > 0.05 (based on original raw values)
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+
+# compute Unassigned and clamp negatives to zero
+weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+# weights[,2:ncol(weights)] = weights[,2:ncol(weights)]/apply(weights[,2:ncol(weights)],1,sum)
+df<- df %>%
+  mutate(
+    SBS1 = weights$SBS1 * Burden_SBS,
+    SBS5 = weights$SBS5 * Burden_SBS,
+    SBS12 = weights$SBS12 * Burden_SBS,
+    APOBEC = (weights$SBS2+weights$SBS13) * Burden_SBS,
+    SBS18 = weights$SBS18 * Burden_SBS,
+    SBS22a = weights$SBS22a * Burden_SBS,
+    SBS22b = weights$SBS22b * Burden_SBS,
+    SBS22c = weights$SBS22c * Burden_SBS,
+    SBS40a = weights$SBS40a * Burden_SBS,
+    SBS40b = weights$SBS40b * Burden_SBS,
+    SBS40c = weights$SBS40c * Burden_SBS,
+    SBSB = weights$SBSB * Burden_SBS,
+    SBSC = weights$SBSC * Burden_SBS,
+    SBSD = weights$SBSD * Burden_SBS,
+    MSI = (weights$SBS21+weights$SBS44) * Burden_SBS,
+    # Unassigned = weights$Unassigned * Burden
+  )
+
+```
+
+```{r Load Indel data}
+weights_path  <- "../data/ID83_kidney_signature_ID_weights_table.csv"
+
+weights_raw <- read.csv(path.expand(weights_path), check.names = FALSE, stringsAsFactors = FALSE)
+weights_raw$Sample <- sub(" .*", "", weights_raw$Sample)
+# keep only samples present in metadata
+weights_raw <- weights_raw[weights_raw$Sample %in% df$Sample, , drop = FALSE]
+rownames(weights_raw) <- weights_raw$Sample
+
+# align and subset weights to the same order as df_normal
+weights <- weights_raw[df$Sample, , drop = FALSE ]
+
+# ensure numeric signature columns (exclude "Sample" if present)
+sig_cols <- setdiff(colnames(weights), "Sample")
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) as.numeric(as.character(x)))
+
+# zero small contributions, but preserve SBS2/SBS13 when their sum > 0.05 (based on original raw values)
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) { x[x < 0.05] <- 0; x })
+
+# compute Unassigned and clamp negatives to zero
+weights$Unassigned <- 1 - rowSums(weights[, sig_cols, drop = FALSE], na.rm = TRUE)
+weights[sig_cols] <- lapply(weights[sig_cols], function(x) pmax(x, 0))
+weights$Unassigned <- pmax(weights$Unassigned, 0)
+
+df<- df %>%
+  mutate(
+    ID5 = weights$ID5 * Burden_ID,
+    ID8 = weights$ID8 * Burden_ID,
+    ID9 = weights$ID9 * Burden_ID,
+    ID11 = weights$ID11 * Burden_ID,
+    ID21 = weights$ID21 * Burden_ID,
+    ID23 = weights$ID23 * Burden_ID,
+    ID1 = weights$ID1 * Burden_ID,
+    ID2 = weights$ID2 * Burden_ID,
+    ID3 = weights$ID3 * Burden_ID,
+    ID12 = weights$ID12 * Burden_ID,
+    # Unassigned = weights$Unassigned * Burden_ID
+  )
+write.csv(df, "../../data_S1/LCM_enrichment_all_samples.csv", row.names = FALSE)
+```
+
+```{r variation across cell types}
+signatures <- c("SBS40b","ID5","ID8","SBS40a","SBS40c","SBS1","SBS5",
+                "SBSB","SBSC","ID3","ID9","ID11","ID21",
+                "SBS22a","SBS22b","SBS22c","ID23","SBS12")
+
+with_tobacco    <- c("SBSB","ID3")
+with_sex        <- c("SBS40b","ID5")
+
+fit_one_signature <- function(sig, df) {
+
+  fixed <- if (sig %in% with_tobacco) {
+    as.formula(paste0(sig, " ~ Age + Structure + Tobacco"))
+  } else if (sig %in% with_sex) {
+    as.formula(paste0(sig, " ~ Age + Structure + Sex"))
+  } else {
+    as.formula(paste0(sig, " ~ Age + Structure"))
+  }
+
+  fit <- lme(
+    fixed  = fixed,
+    random = ~ 1 | Country/Patient,
+    data   = df,
+    method = "ML"
+  )
+
+  emm   <- emmeans(fit, ~ Structure)
+  contr <- contrast(emm, method = "eff")  
+
+  as.data.frame(
+    summary(contr, infer = c(TRUE, TRUE), adjust = "none")
+  ) |>
+    mutate(
+      Signature = sig,
+      Structure = sub(" effect$", "", contrast)
+    )
+}
+
+# run all signatures
+all_tests_structure <- map_dfr(
+  signatures,
+  ~fit_one_signature(.x, df[df$Structure!='Tumor',])
+)
+
+# Global BH across ALL Signature × Structure tests
+all_tests_structure <- all_tests_structure |>
+  mutate(p_adj_global = p.adjust(p.value, method = "BH")) |>
+  arrange(p_adj_global)
+
+write.csv(all_tests_structure, "../../data_S1/LCM_enrichment_structure_variation.csv", row.names = FALSE)
+all_tests_structure
+
+```
+
+
+
+```{r geographic variation of signatures in proximal tubules}
+signatures <- c("SBS40b", "ID5", "ID8", "SBS40a", "SBS40c", "SBS1", "SBS5", "SBSB", "ID3","SBSC", "ID9", "ID11","ID21", "SBS22a", "SBS22b", "SBS22c", "ID23","SBS12")
+region_specific <- c("SBS22a","SBS22b","SBS22c","ID23","SBS12")
+
+fit_one_signature_lme <- function(sig, df) {
+
+  # build formula based on your logic
+  fixed_form <- if (sig %in% region_specific) {
+    as.formula(paste0(sig, " ~ Country"))
+  } else {
+    as.formula(paste0(sig, " ~ Age + Country"))
+  }
+
+    model <- lme(
+    fixed  = fixed_form,
+    random = ~ 1 | Patient,
+    data   = df,
+    method = "REML",
+    control = lmeControl(opt = "optim")
+  )
+
+  # adjusted country means (for non-region-specific sigs, this is adjusted for Age/Tobacco)
+  emm   <- emmeans(model, ~ Country)
+
+  # Country vs grand mean (one test per country)
+  contr <- contrast(emm, method = "eff")
+
+  res <- as.data.frame(summary(contr, infer = c(TRUE, TRUE), adjust = "none")) |>
+    mutate(
+      Signature = sig,
+      Country   = sub(" effect$", "", contrast)  # "Country effect" -> "Country"
+    )
+
+  res
+}
+
+# 1) run all signatures
+all_tests <- map_dfr(signatures, ~fit_one_signature_lme(.x, df[df$Structure=='Proximal_tubules',]))
+
+# 2) Global BH across ALL (Country × Signature) tests
+all_tests_country <- all_tests |>
+  mutate(p_adj_global = p.adjust(p.value, method = "BH")) |>
+  arrange(p_adj_global, p.value)
+
+write.csv(all_tests_country, "../../data_S1/LCM_enrichment_geographic_variation_PT.csv", row.names = FALSE)
+all_tests_country
+
+```
