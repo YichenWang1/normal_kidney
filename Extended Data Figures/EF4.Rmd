@@ -158,7 +158,7 @@ test$Structure <-  factor(test$Structure,
 
 p1 <- ggplot(test, aes(x = Structure, y = E2, fill = E1)) +
   geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+theme(axis.text.x = element_text(angle = 60, hjust = 1, vjust=1.2),axis.ticks.x = element_blank(), panel.grid=element_blank(),panel.border=element_blank(),text = element_text(size = 6))+
-  labs(x = 'Structure', y = 'SBS average burden', fill = "Signatures", title = 'Aristolochic acid exposed')
+  labs(x = 'Structure', y = 'Indel average burden', fill = "Signatures", title = 'Aristolochic acid exposed')
 
 p1
 
@@ -189,7 +189,7 @@ test$Structure <-  factor(test$Structure,
 
 p2 <- ggplot(test, aes(x = Structure, y = E2, fill = E1)) +
   geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+theme(axis.text.x = element_text(angle = 60,  hjust = 1, vjust=1.2),axis.ticks.x = element_blank(), panel.grid=element_blank(),panel.border=element_blank(),text = element_text(size = 6))+
-  labs(x = "Structure", y = 'SBS average burden', fill = "Signatures", title = 'Remaining cases')
+  labs(x = "Structure", y = 'Indel average burden', fill = "Signatures", title = 'Remaining cases')
 
 p2
 

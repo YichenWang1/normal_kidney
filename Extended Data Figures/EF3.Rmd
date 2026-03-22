@@ -6,11 +6,8 @@ output: md_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(RColorBrewer)
-library(ggtree)
 library(lsa)
 library(lattice)
-library(sigfit)
-# data("cosmic_signatures_v3.2", package="sigfit")
 ```
 
 

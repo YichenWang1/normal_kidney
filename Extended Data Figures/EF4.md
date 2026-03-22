@@ -161,11 +161,11 @@
 
     p1 <- ggplot(test, aes(x = Structure, y = E2, fill = E1)) +
       geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+theme(axis.text.x = element_text(angle = 60, hjust = 1, vjust=1.2),axis.ticks.x = element_blank(), panel.grid=element_blank(),panel.border=element_blank(),text = element_text(size = 6))+
-      labs(x = 'Structure', y = 'SBS average burden', fill = "Signatures", title = 'Aristolochic acid exposed')
+      labs(x = 'Structure', y = 'Indel average burden', fill = "Signatures", title = 'Aristolochic acid exposed')
 
     p1
 
-![](S4_files/figure-markdown_strict/plot%20LCM%20data%20for%20AA%20exposed%20cases-1.png)
+![](EF4_files/figure-markdown_strict/plot%20LCM%20data%20for%20AA%20exposed%20cases-1.png)
 
     # df_matched = df[df$Country != 'UK',]
     summary_lcm <-df[!df$Patient %in% c(SBS22_postive,df$Patient[df$Country == 'UK']),] %>% 
@@ -191,11 +191,11 @@
 
     p2 <- ggplot(test, aes(x = Structure, y = E2, fill = E1)) +
       geom_bar(stat = "identity",show.legend = TRUE) +scale_fill_manual(values=cols)+ theme_bw()+theme(axis.text.x = element_text(angle = 60,  hjust = 1, vjust=1.2),axis.ticks.x = element_blank(), panel.grid=element_blank(),panel.border=element_blank(),text = element_text(size = 6))+
-      labs(x = "Structure", y = 'SBS average burden', fill = "Signatures", title = 'Remaining cases')
+      labs(x = "Structure", y = 'Indel average burden', fill = "Signatures", title = 'Remaining cases')
 
     p2
 
-![](S4_files/figure-markdown_strict/plot%20LCM%20data%20for%20remaining%20cases-1.png)
+![](EF4_files/figure-markdown_strict/plot%20LCM%20data%20for%20remaining%20cases-1.png)
 
     library(ggpubr)
     pdf("../../figure/Extended Data Fig/EF4/indel_sigs_compare.pdf",width = 5, height = 3.5)
